@@ -1,0 +1,36 @@
+
+$red : #c21e15;
+$red-lighten-1: lighten($red, 1.5);
+$red : #c21e15;
+$red-darken-1: darken($red,10);
+$orange: #D0711E;
+$orange-40: lighten($orange, 1.5%);
+$orange-60: darken($orange, 1.5%);
+$terangbanget: rgb(255, 255, 0);
+
+$tosca: #00A19B;
+
+
+$z-depth-1: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) ;
+$z-depth-1-half: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15) ;
+$z-depth-2: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
+$z-depth-3: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+$z-depth-4: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21) ;
+$z-depth-5: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+
+
+$dk-theme-colors: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$dk-theme-colors: map-merge(
+  (
+    'primary': $red,
+    'success': $tosca,
+    'warning': $orange,
+    'terangbanget': $terangbanget
+  ),
+  $dk-theme-colors  
+);
+
+@each $name, $color in $dk-theme-colors {
+    @debug  $name,lightness($color)
+}
