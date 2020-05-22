@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600&display=swap');
+
+// @import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+// @import  "node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+// @import  "node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+// @import  "node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+// @import "node_modules/angular-bootstrap-md/assets/scss/mdb.scss";
+// @import "node_modules/angular-bootstrap-md/assets/scss/bootstrap/bootstrap.scss";
+
+// @import  "node_modules/animate.css/animate.css";
+@import 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css';
+@import './styles/abstracts/variables';
+@import './styles/abstracts/button';
+@import './styles/components/button';
+@import './styles/prism.css';
+
+
+
+html {
+  font-family: 'Baloo Da 2', cursive !important;
+}
+
+body {
+  font-family: 'Baloo Da 2', cursive !important;
+}
+
+.btn.dropdown {
+  box-shadow: none;
+}
+
+pre{
+    font-size: 0.8rem;
+}
+
+.d-flex{
+  display: flex;
+}
+

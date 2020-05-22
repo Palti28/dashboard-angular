@@ -1,0 +1,87 @@
+<div [ngClass]="{'toggled': showNavBar}" class="d-flex" id="wrapper">
+  <nav #appDrawer id="dk-sidebar-wrapper">
+    <div class="dk-sidebar-heading">
+      <div class="dk-sidebar-heading-logo">
+        <img src="../assets/doku-logo.svg" alt="">
+        <span>DOKU UI FRAMEWORK</span>
+        
+      </div>
+    </div>
+    <div class="dk-side-menu dk-side-menu-flush">
+      <ul class="dk-side-menu-item">
+        <li class="dk-side-menu-item-header">General</li>
+        <app-menu-list-item *ngFor="let item of navItems" [item]="item"></app-menu-list-item>
+      </ul>
+      <!-- <div class="" mdbCollapse #test="bs-collapse">
+        <a role="button" (click)="child1.toggle()" [ngClass]="{'active' : child1}"
+          class="dk-side-menu-item-action ">Overview 2<mdb-icon fas icon="angle-down"></mdb-icon></a>
+        <div class="" mdbCollapse #child1="bs-collapse" style="padding-left: 10px;">
+          <a href="/page-two" class="dk-side-menu-item dk-side-menu-item-action ">Overview 2.1</a>
+          <a href="#" class="dk-side-menu-item dk-side-menu-item-action ">Overview 2.2</a>
+        </div>
+      </div> -->
+    </div>
+  </nav>
+  <!-- /#sidebar-wrapper -->
+
+  <div id="dk-page-content-wrapper">
+    <!-- <div id="page-content-wrapper" class="col-md-8 ml-sm-auto col-lg-9 px-4"> -->
+    <nav class="navbar dk-navbar navbar-expand-md">
+      <!-- <button type="button" mdbBtn color="secondary" (click)="toggleNavbar()" mdbWavesEffect>Toggle Menu</button> -->
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        abcs
+      </button>
+
+      <div class="collapse navbar-collapse dk-navbar-content"  id="navbarSupportedContent">
+        <a role="button" (click)="toggleNavbar()" ><i id="toggle-icon" [ngClass]="(showNavBar) ? 'fas fa-bars': 'fas fa-times' "  class="fas fa-bars"></i></a>
+        <!-- <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul> -->
+        <div class="dk-navbar-item dk-navbar-item__user">
+
+          <!-- <div class="nav-item" mdbDropdown>
+            <a mdbDropdownToggle  type="button" class="dropdown-toggle ">
+              <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" alt=""
+                class="img-fluid rounded z-depth-0">
+              DOKU Admin 
+            </a>
+
+            <div class="dropdown-menu dropdown-primary dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="divider dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="main-content container-fluid">
+      <!-- Page Content -->
+      <router-outlet></router-outlet>
+    </div>
+    <!-- </div> -->
+  </div>

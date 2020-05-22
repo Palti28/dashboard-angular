@@ -1,0 +1,56 @@
+@import "../abstracts/variables";
+@import "../abstracts/button";
+
+
+// .btn {
+//   font-size: 3rem;
+//   &.dk-btn {
+//     margin: .375rem;
+//     padding: 10px 16px 10px;
+//     border-radius: 8px;
+//     text-transform: capitalize;
+
+//     //make button variations and handle the element state
+//     @each $name,
+//     $color in $dk-theme-colors {
+//       &.dk-btn-#{$name} {
+//         @include make-button ($name, $color);
+//       }
+//     }
+//   }
+
+//   &:focus{
+//     box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25) !important;
+//   }
+// }
+
+.btn{
+  font-size: 1rem;
+  margin: .375rem;
+  padding: 10px 16px 10px;
+  border-radius: 8px;
+  text-transform: capitalize;
+
+  //make button variations and handle the element state
+  @each $name,
+  $color in $dk-theme-colors {
+    &.dk-btn-#{$name} {
+      @include make-button ($name, $color);
+    }
+  }
+  &:focus{
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25) !important;
+  }
+  
+  i{
+    margin: 0 8px 0 8px;
+  }
+
+}
+
+.btn-group{
+  .btn{
+    margin: 0px;
+  
+  }
+}
