@@ -1,87 +1,298 @@
-<div [ngClass]="{'toggled': showNavBar}" class="d-flex" id="wrapper">
-  <nav #appDrawer id="dk-sidebar-wrapper">
-    <div class="dk-sidebar-heading">
-      <div class="dk-sidebar-heading-logo">
-        <img src="../assets/doku-logo.svg" alt="">
-        <span>DOKU UI FRAMEWORK</span>
-        
-      </div>
-    </div>
-    <div class="dk-side-menu dk-side-menu-flush">
-      <ul class="dk-side-menu-item">
-        <li class="dk-side-menu-item-header">General</li>
-        <app-menu-list-item *ngFor="let item of navItems" [item]="item"></app-menu-list-item>
-      </ul>
-      <!-- <div class="" mdbCollapse #test="bs-collapse">
-        <a role="button" (click)="child1.toggle()" [ngClass]="{'active' : child1}"
-          class="dk-side-menu-item-action ">Overview 2<mdb-icon fas icon="angle-down"></mdb-icon></a>
-        <div class="" mdbCollapse #child1="bs-collapse" style="padding-left: 10px;">
-          <a href="/page-two" class="dk-side-menu-item dk-side-menu-item-action ">Overview 2.1</a>
-          <a href="#" class="dk-side-menu-item dk-side-menu-item-action ">Overview 2.2</a>
-        </div>
-      </div> -->
-    </div>
-  </nav>
-  <!-- /#sidebar-wrapper -->
-
-  <div id="dk-page-content-wrapper">
-    <!-- <div id="page-content-wrapper" class="col-md-8 ml-sm-auto col-lg-9 px-4"> -->
-    <nav class="navbar dk-navbar navbar-expand-md">
-      <!-- <button type="button" mdbBtn color="secondary" (click)="toggleNavbar()" mdbWavesEffect>Toggle Menu</button> -->
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        abcs
-      </button>
-
-      <div class="collapse navbar-collapse dk-navbar-content"  id="navbarSupportedContent">
-        <a role="button" (click)="toggleNavbar()" ><i id="toggle-icon" [ngClass]="(showNavBar) ? 'fas fa-bars': 'fas fa-times' "  class="fas fa-bars"></i></a>
-        <!-- <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-        </ul> -->
-        <div class="dk-navbar-item dk-navbar-item__user">
-
-          <!-- <div class="nav-item" mdbDropdown>
-            <a mdbDropdownToggle  type="button" class="dropdown-toggle ">
-              <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" alt=""
-                class="img-fluid rounded z-depth-0">
-              DOKU Admin 
-            </a>
-
-            <div class="dropdown-menu dropdown-primary dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-              <div class="divider dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a>
-            </div>
-          </div> -->
-        </div>
-      </div>
-    </nav>
 
 
-    <div class="main-content container-fluid">
-      <!-- Page Content -->
-      <router-outlet></router-outlet>
-    </div>
-    <!-- </div> -->
-  </div>
+
+<body id="dk_body" class="header-fixed aside-enabled aside-fixed" (window:resize)="checkScreenSize()" [ngClass]="{'aside-minimized': asideMinimized, 'aside-minimized-hover': asideMinimizedHover, 'dk-mobile': screenMobile, 'mobile-navbar-show':mobileNavbarShow  }">
+<!-- <body #dk_body class="header-fixed aside-enabled aside-fixed" [ngClass]="handleAside()"> -->
+	<div class="d-flex flex-column flex-root">
+		<div class="d-flex flex-row flex-column-fluid page">
+      <div #dk_aside class="aside aside-left aside-fixed  d-flex flex-column flex-row-auto"
+        (mouseenter)="hoverAside(true)" (mouseleave)="hoverAside(false)" [ngStyle]="{'left' : mobileNavbarShow ? '0px' : ''}"
+      >
+				<div id="dk_brand" class="brand flex-column-auto">
+					<a href="" class="brand-logo">
+						<img src="../../img/doku-logo.png" alt="">
+						<div class="brand-text">DOKU Dashboard</div>
+						
+					</a>
+					<span *ngIf="screenMobile"><i (click)="closeNavbar()" role="button" class="fa fa-times d-flex ml-5" aria-hidden="true"></i></span>
+					<div id="dk_aside_toggle" class="brand-toggle btn btn-sm px-0" (click)="toggleAside()">
+						<i id="toggle-aside" class="fas fa-sliders-h"></i>
+					</div>
+				</div>
+				<div id="dk_aside_menu_wrapper" class="aside-menu-wrapper flex-column-fluid">
+					<div id="dk_aside_menu" class="aside-menu my-3 scroll ps ps--active-y">
+
+						<!-- ======================================== menu-nav == start -->
+						<ul class="menu-nav">
+							<!-- <li class="menu-item px-4 py-2">
+								<button type="button" class="btn btn-block btn-primary">Active your bisuness</button>
+							</li> -->
+
+							<li class="menu-item " aria-haspopup="true">
+								<a href="" class="menu-link">
+									<span class="menu-icon">
+										<i class="fas fa-chess-rook"></i>
+									</span>
+									<span class="menu-text">
+										Dashboard
+									</span>
+								</a>
+              </li>
+              
+							<li class="menu-section">
+								<span class="menu-text">Foundation</span>
+								<i class="fas fa-ellipsis-h icon-more"></i>
+              </li>
+
+              <app-menu-list-item *ngFor="let item of navItems" [item]="item" [isAsideMinimized]="asideMinimized" [isAsideHovered]="asideMinimizedHover"></app-menu-list-item>
+
+							<!-- menu component == start ==== -->
+							<li class="menu-item menu-item-submenu menu-item-open">
+								<a class="menu-link menu-toggle collapsed" data-toggle="collapse" href="#collapseExample2" role="button"
+									aria-expanded="false" aria-controls="collapseExample2">
+									<span class="menu-icon">
+										<i class="fas fa-chess-rook"></i>
+									</span>
+									<span class="menu-text">
+										Components
+									</span>
+									<span class="menu-arrow">
+										<i class="fa menu-arrow"></i>
+									</span>
+								</a>
+								<!-- sub-menu -->
+								<div class="collapse menu-submenu" id="collapseExample2" data-parent="#dk_aside_menu">
+									<ul class="menu-subnav">
+										<li class="menu-item menu-item-submenu">
+											<a href="#" class=" submenu-link">
+												<span class="menu-bullet">
+													<i class="far fa-circle"></i>
+												</span>
+												<span class="menu-text">
+													sub menu dashboard
+												</span>
+											</a>
+											<a href="#" class=" submenu-link">
+												<span class="menu-bullet">
+													<i class="far fa-circle"></i>
+												</span>
+												<span class="menu-text">
+													sub menu dashboard 2
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<!-- menu component == end ==== -->
+
+							<li class="menu-section">
+								<span class="menu-text">Generals</span>
+								<i class="fas fa-ellipsis-h icon-more"></i>
+							</li>
+
+							<!-- menu examplepage == start ==== -->
+							<li class="menu-item " aria-haspopup="true">
+								<a href="" class="menu-link">
+									<span class="menu-icon">
+										<i class="fas fa-book"></i>
+									</span>
+									<span class="menu-text">
+										Utility
+									</span>
+								</a>
+							</li>
+							<li class="menu-item " aria-haspopup="true">
+								<a href="" class="menu-link">
+									<span class="menu-icon">
+										<i class="fas fa-chess-rook"></i>
+									</span>
+									<span class="menu-text">
+										Dashboard
+									</span>
+								</a>
+							</li>
+							<li class="menu-item menu-item-submenu menu-item-open">
+								<a class="menu-link menu-toggle collapsed" data-toggle="collapse" href="#collapseExample3" role="button"
+									aria-expanded="false" aria-controls="collapseExample3">
+									<span class="menu-icon">
+										<i class="fas fa-archive"></i>
+									</span>
+									<span class="menu-text">
+										Component
+									</span>
+									<span class="menu-arrow">
+										<i class="fa menu-arrow"></i>
+									</span>
+								</a>
+								<!-- sub-menu -->
+								<div class="collapse menu-submenu" id="collapseExample3" data-parent="#dk_aside_menu">
+									<ul class="menu-subnav">
+										<li class="menu-item menu-item-submenu">
+											<a href="#" class=" submenu-link">
+												<span class="menu-bullet">
+													<i class="far fa-circle"></i>
+												</span>
+												<span class="menu-text">
+													Login
+												</span>
+											</a>
+											<a href="#" class=" submenu-link">
+												<span class="menu-bullet">
+													<i class="far fa-circle"></i>
+												</span>
+												<span class="menu-text">
+													Bank Logo
+												</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<!-- menu examplepage == start ==== -->
+						</ul>
+						<!-- ======================================== menu nav == end -->
+					</div>
+				</div>
+			</div>
+
+			<!-- content wrapper (right) -->
+			<div id="dk_wrapper" class="d-flex flex-column flex-row-fluid wrapper">
+
+				<!-- header == start -->
+				<div id="dk_header" class="header  header-fixed ">
+					<div class="container-fluid  d-flex align-items-stretch justify-content-between">
+						<div class="topbar ">
+							<button class="btn btn-default btn-icon borderless" (click)="toggleAsideMobile()">
+								<i class="fas fa-sliders-h"></i>
+							</button>
+						</div>
+						<!-- topbar == start -->
+						<div class="topbar">
+							<div class="btn-group mx-3 show">
+								<!-- dropdown-notification == start -->
+								<button class="btn btn-default btn-icon borderless dropdown-toggle dropdown-icon"
+									id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+									<i class="far fa-bell"></i>
+								</button>
+								<div class="dropdown-menu dropdown-menu-right dropdown-notification" x-placement="bottom-end"
+									style="position: absolute; transform: translate3d(-337px, 40px, 0px); top: 0px; left: 0px; will-change: transform;">
+									<a class="dropdown-item" href="#">
+										<div class="notification-content">
+											<div class="icon">
+												<i class="far fa-bell text-success	"></i>
+											</div>
+											<div class="content">
+												<div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+													elit. In totam explicabo</div>
+												<div class="notification-time">
+													6 minutes ago
+												</div>
+											</div>
+										</div>
+									</a>
+									<a class="dropdown-item" href="#">
+										<div class="notification-content">
+											<div class="icon">
+												<i class="fas fa-check text-success "></i>
+											</div>
+											<div class="content">
+												<div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+													elit. In totam explicabo</div>
+												<div class="notification-time">
+													6 minutes ago
+												</div>
+											</div>
+										</div>
+									</a>
+									<a class="dropdown-item" href="#">
+										<div class="notification-content">
+											<div class="icon">
+												<i class="fas fa-check text-success "></i>
+											</div>
+											<div class="content">
+												<div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+													elit. In totam explicabo</div>
+												<div class="notification-time">
+													6 minutes ago
+												</div>
+											</div>
+										</div>
+									</a>
+									<a class="dropdown-item" href="#">
+										<div class="notification-content">
+											<div class="icon">
+												<i class="fas fa-check text-success "></i>
+											</div>
+											<div class="content">
+												<div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+													elit. In totam explicabo</div>
+												<div class="notification-time">
+													6 minutes ago
+												</div>
+											</div>
+										</div>
+									</a>
+									<a class="dropdown-item" href="#">
+										<div class="notification-content">
+											<div class="icon">
+												<i class="fas fa-check text-success "></i>
+											</div>
+											<div class="content">
+												<div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+													elit. In totam explicabo</div>
+												<div class="notification-time">
+													6 minutes ago
+												</div>
+											</div>
+										</div>
+									</a>
+									<a class="dropdown-item" href="#">Show all notifications</a>
+								</div>
+								<!-- dropdown-notification == end -->
+							</div>
+							<!-- dropdown-user == start -->
+							<div class="dropdown-user d-inline-block">
+								<div class="btn-group">
+									<a href="" class=" dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+										aria-haspopup="true" aria-expanded="false">
+										<img class="img-responsive img-rounded" src="../../img/user.jpg" alt="User picture">
+									</a>
+									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+										<a class="dropdown-item" href="#">Action</a>
+										<a class="dropdown-item" href="#">Another action</a>
+										<a class="dropdown-item" href="#">Something else here</a>
+									</div>
+								</div>
+							</div>
+							<!-- dropdown-user == end -->
+						</div>
+						<!-- topbar == end -->
+					</div>
+				</div>
+				<!-- header == end -->
+
+				<!-- main content == start -->
+				<div id="dk_content" class="content d-flex flex-column flex-column-fluid">
+					<div class="main-content d-flex flex-column-fluid">
+						<div class="container-fluid">
+							<!-- ======================================== entry-content ======================================== start -->
+							<router-outlet>
+
+              </router-outlet>
+							<!-- ======================================== entry-content ======================================== end -->
+						</div>
+					</div>
+				</div>
+				<!-- main content == end -->
+			</div>
+			<!-- content wrapper (right) -->
+		</div>
+	</div>
+
+	<!-- <script src="../../js/jquery-3.3.1.min.js"></script> -->
+	<!-- Popper and Bootstrap JS -->
+	<!-- <script src="../../js/popper.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<script src="./newDashboard.js"></script> -->
+</body>

@@ -22,7 +22,9 @@ export class MenuListItemComponent implements OnInit {
   @HostBinding('attr.aria-expanded') ariaExpanded = this.expanded;
   @Input() item: NavItem;
   @Input() depth: number;
-
+  @Input() isAsideMinimized: boolean;
+  @Input() isAsideHovered: boolean;
+ 
   constructor(public navService : NavService, public router:Router ) {
     if(this.depth === undefined){
       this.depth = 0;
@@ -46,7 +48,23 @@ export class MenuListItemComponent implements OnInit {
       // this.navService.closeNav();
     }
     if(item.children && item.children.length){
-      this.expanded = !this.expanded
+      if(this.expanded ){
+        this.expanded = !this.expanded
+      }else{
+        this.expanded = false
+      }
+      
+    }
+  }
+
+  isDisplay(){
+    if(!this.isAsideMinimized){
+      return ('d-flex')
+    }else if(this.isAsideMinimized && this.isAsideHovered){
+      return ('d-flex')
+    }
+    else{
+      return ('d-none')
     }
   }
 }

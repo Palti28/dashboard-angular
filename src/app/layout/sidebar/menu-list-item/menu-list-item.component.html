@@ -1,19 +1,22 @@
-<li class="dk-side-menu-item" >
-  <!-- <a role="button" [ngClass]="{'active' : 'show'}" class="dk-side-menu-item dk-side-menu-item-action "> -->
-    <a role="button" [routerLink]="item.route" [routerLinkActive]="['selected']" [ngStyle]="{'padding-left': (depth * 12) + 'px'}" (click)="onItemSelected(item)"  class="dk-side-menu-item dk-side-menu-item-action">
-    <!-- <mdb-icon fas icon="home"></mdb-icon> -->
-    <!-- <i class="fas fa-home" [className]="'fas '+{item.iconName}"></i> -->
-    
-    <i class="fa" [ngStyle]="{'margin-right': (item.iconName !== '') ? '' :'0px'} "  [className]="'fa fa-'+ item.iconName"></i>
-    <!-- [ngStyle]="{'background-color': (vars.state=='Signup') ? '#73c7af' : '#ffffff'}" -->
-    <span class="menu-text">{{item.displayName}}</span>
-    <span *ngIf="item.children && item.children.length">
-      <!-- <mdb-icon fas icon="angle-down" [@indicatorRotate]="expanded ? 'expanded': 'collapsed'"></mdb-icon> -->
+
+<li class="menu-item menu-item-submenu menu-item-open">
+  <a class="menu-link menu-toggle collapsed" role="button" [ngStyle]="{'padding-left': ((depth * 12) + 25) + 'px'}"  [routerLink]="item.route" (click)="onItemSelected(item)"
+    aria-expanded="false" aria-controls="collapseExample">
+    <span class="menu-icon">
+      <!-- <i class="fas fa-chess-rook"></i> -->
+      <i class="fa" [ngStyle]="{'margin-right': (item.iconName !== '') ? '' :'16px'} "  [className]="'fa fa-'+ item.iconName"></i>
     </span>
+    <span class="menu-text">
+      {{item.displayName}}
+    </span>
+    <span *ngIf="item.children && item.children.length" class="menu-arrow">
+        <i class="fa menu-arrow"></i>
+    </span>
+    
   </a>
-  
 </li>
 <div *ngIf="expanded">
-  <app-menu-list-item *ngFor="let child of item.children" [item]="child" [depth]="depth+1">
+  <!-- <app-menu-list-item *ngFor="let child of item.children" [item]="child" [depth]="depth+1" [ngStyle]="{'display' :!isAsideMinimized ? 'flex' : 'none'}"> -->
+  <app-menu-list-item *ngFor="let child of item.children" [item]="child" [depth]="depth+1" [ngClass]="isDisplay()">
   </app-menu-list-item>
 </div>

@@ -16,18 +16,10 @@ export class DashboardComponent implements OnInit {
   
 
   };
-  
-  //  ac = document.getElementById("asd")
 
   test(){
     var ac = document.getElementById("asd")
-    console.log(ac);
   }
-
-  // selector = ng.element('#asd')
-  // test() {
-  //   console.log(this.selector);
-  // }
 
   autoClosealert(selector, duration) {
     selector = document.getElementById(selector);
