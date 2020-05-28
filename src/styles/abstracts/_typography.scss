@@ -28,15 +28,18 @@ $font-medium        :   "dinmedium", helvetica, arial;
 html{
   font-family: $font-reg;
 }
+
+p{
+  color: $gray-700 !important;
+  font-size: 1rem;
+}
+
 .page-header{
   h3{
       font-family: $font-medium;
       color: $gray-700 !important;
   }
-  p{
-      color: $gray-300 !important;
-      font-size: 1rem;
-  }
+ 
 }
 
 .card-title{

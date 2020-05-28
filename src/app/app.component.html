@@ -254,14 +254,16 @@
 							<!-- dropdown-user == start -->
 							<div class="dropdown-user d-inline-block">
 								<div class="btn-group">
-									<a href="" class=" dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown"
+									<div ngbDropdown class="d-inline-block">
+										<a role="button" class=" dropdown-toggle" id="dropdownBasic1" ngbDropdownToggle  data-toggle="dropdown"
 										aria-haspopup="true" aria-expanded="false">
 										<img class="img-responsive img-rounded" src="../../img/user.jpg" alt="User picture">
 									</a>
-									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-										<a class="dropdown-item" href="#">Action</a>
-										<a class="dropdown-item" href="#">Another action</a>
-										<a class="dropdown-item" href="#">Something else here</a>
+										<div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+											<button ngbDropdownItem>Action - 1</button>
+											<button ngbDropdownItem>Another Action</button>
+											<button ngbDropdownItem>Something else is here</button>
+										</div>
 									</div>
 								</div>
 							</div>

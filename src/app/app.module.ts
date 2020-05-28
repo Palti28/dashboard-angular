@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 // import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -16,6 +16,7 @@ import { LoginComponent } from './modules/sample-pages/login/login.component';
 import { MenuListItemComponent } from './layout/sidebar/menu-list-item/menu-list-item.component';
 import { NavService } from './layout/sidebar/nav.service';
 import { LoadersComponent } from './shared/components/loaders/loaders.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -35,8 +36,13 @@ import { LoadersComponent } from './shared/components/loaders/loaders.component'
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    NgbModule,
   ],
   providers: [NavService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA
+  ],
 })
 export class AppModule { }

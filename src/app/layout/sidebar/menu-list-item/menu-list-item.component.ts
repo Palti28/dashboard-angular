@@ -1,4 +1,4 @@
-import {Component, HostBinding, Input, OnInit} from '@angular/core';
+import {Component, HostBinding, Input, OnInit, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {Router} from '@angular/router';
 import {NavItem} from '../nav-item';
@@ -8,6 +8,7 @@ import {NavService} from '../nav.service'
   selector: 'app-menu-list-item',
   templateUrl: './menu-list-item.component.html',
   styleUrls: ['./menu-list-item.component.scss'],
+ 
   animations:[
     trigger('indicatorRotate', [
       state('collapsed', style({transform: 'rotate(0deg)'})),
