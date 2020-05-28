@@ -1,4 +1,4 @@
-import {Component, HostBinding, Input, OnInit} from '@angular/core';
+import {Component, HostBinding, Input, OnInit, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import {Router} from '@angular/router';
 import {NavItem} from '../nav-item';
@@ -8,6 +8,7 @@ import {NavService} from '../nav.service'
   selector: 'app-menu-list-item',
   templateUrl: './menu-list-item.component.html',
   styleUrls: ['./menu-list-item.component.scss'],
+ 
   animations:[
     trigger('indicatorRotate', [
       state('collapsed', style({transform: 'rotate(0deg)'})),
@@ -22,7 +23,9 @@ export class MenuListItemComponent implements OnInit {
   @HostBinding('attr.aria-expanded') ariaExpanded = this.expanded;
   @Input() item: NavItem;
   @Input() depth: number;
-
+  @Input() isAsideMinimized: boolean;
+  @Input() isAsideHovered: boolean;
+ 
   constructor(public navService : NavService, public router:Router ) {
     if(this.depth === undefined){
       this.depth = 0;
@@ -46,7 +49,23 @@ export class MenuListItemComponent implements OnInit {
       // this.navService.closeNav();
     }
     if(item.children && item.children.length){
-      this.expanded = !this.expanded
+      if(this.expanded ){
+        this.expanded = !this.expanded
+      }else{
+        this.expanded = false
+      }
+      
+    }
+  }
+
+  isDisplay(){
+    if(!this.isAsideMinimized){
+      return ('d-flex')
+    }else if(this.isAsideMinimized && this.isAsideHovered){
+      return ('d-flex')
+    }
+    else{
+      return ('d-none')
     }
   }
 }

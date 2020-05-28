@@ -1,36 +1,64 @@
+$white:    #FFFFFF !default;  //WHITE
+$black:    #000000 !default;  //BLACK
 
-$red : #c21e15;
-$red-lighten-1: lighten($red, 1.5);
-$red : #c21e15;
-$red-darken-1: darken($red,10);
-$orange: #D0711E;
-$orange-40: lighten($orange, 1.5%);
-$orange-60: darken($orange, 1.5%);
-$terangbanget: rgb(255, 255, 0);
+$gray-050: #FAFAFA !default;
+$gray-100: #E6E6E6 !default;
+$gray-200: #CCCCCC !default;
+$gray-300: #B3B3B3 !default;
+$gray-400: #999999 !default;
+$gray-500: #808080 !default;
+$gray-600: #666666 !default;
+$gray-700: #4D4D4D !default;
+$gray-800: #333333 !default;
+$gray-900: #1A1A1A !default;
 
-$tosca: #00A19B;
+$red-100:  #FFD8CD !default;
+$red-200:  #FFB19E !default;
+$red-300:  #F98A71 !default;
+$red-400:  #EE5F46 !default;
+$red-500:  #E1251B !default;
+$red-600:  #C8251B !default;
+$red-700:  #AF251B !default;
+$red-800:  #96251B !default;
+$red-900:  #7D251B !default;
 
+$tosca-100:  #C5EDE9 !default;
+$tosca-200:  #86DBD5 !default;
+$tosca-300:  #26C9C1 !default;
+$tosca-400:  #00B5AE !default;
+$tosca-500:  #00A19B !default;
+$tosca-600:  #00827D !default;
+$tosca-700:  #00726E !default;
+$tosca-800:  #006461 !default;
+$tosca-900:  #005B57 !default;
 
-$z-depth-1: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) ;
-$z-depth-1-half: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15) ;
-$z-depth-2: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) ;
-$z-depth-3: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-$z-depth-4: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21) ;
-$z-depth-5: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+$yellow-100:  #FFE7D4 !default;
+$yellow-200:  #FFD1AA !default;
+$yellow-300:  #FFBA81 !default;
+$yellow-400:  #FEA458 !default;
+$yellow-500:  #F88D2B !default;
+$yellow-600:  #E68528 !default;
+$yellow-700:  #DA7B23 !default;
+$yellow-800:  #D0711E !default;
+$yellow-900:  #C66719 !default;
 
-
-$dk-theme-colors: ();
-// stylelint-disable-next-line scss/dollar-variable-default
-$dk-theme-colors: map-merge(
-  (
-    'primary': $red,
-    'success': $tosca,
-    'warning': $orange,
-    'terangbanget': $terangbanget
-  ),
-  $dk-theme-colors  
-);
-
-@each $name, $color in $dk-theme-colors {
-    @debug  $name,lightness($color)
+.bg-gradient-red{
+    background: linear-gradient(to right, #F98A71, #fe7096) !important;
 }
+
+.bg-gradient-yellow{
+    background: linear-gradient(to right, #FFBA81, #FEA458 99%) !important;
+}
+
+.bg-gradient-green{
+    background: linear-gradient(to right, #26C9C1, #00A19B) !important;
+}
+
+$primary:       $red-500 ;
+$secondary:     $gray-600 ;
+$success:       $tosca-500 ;
+$info:          $gray-300 ;
+$warning:       $yellow-500 ;
+$danger:        $red-700 ;
+$light:         $gray-100 ;
+$dark:          $gray-800 ;

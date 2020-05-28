@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'dinlight';
+  src: url('assets/fonts/DINNextLTPro-Light.otf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'dinregular';
+  src: url('assets/fonts/DINNextLTPro-Regular.otf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'dinmedium';
+  src: url('assets/fonts/DINNextLTPro-Medium.otf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// SETTING TEXT AND FONT 
+$font-light         :   "dinlight", helvetica, arial;
+$font-reg           :   "dinregular", helvetica, arial;
+$font-medium        :   "dinmedium", helvetica, arial;
+
+// HEADER SIZE
+html{
+  font-family: $font-reg;
+}
+
+p{
+  color: $gray-700 !important;
+  font-size: 1rem;
+}
+
+.page-header{
+  h3{
+      font-family: $font-medium;
+      color: $gray-700 !important;
+  }
+ 
+}
+
+.card-title{
+  font-size: 22px;
+}
+
+.card-description{
+  color: $gray-300 !important;
+  //padding-bottom: 16px !important;
+
+  ul{
+      padding-left: 16px;
+  }
+
+}
+$font-size-base:                1rem;
+$headings-line-height:          1.5;
+
+$h1-font-size:                $font-size-base * 3;
+$h2-font-size:                $font-size-base * 2.25;
+$h3-font-size:                $font-size-base * 2;
+$h4-font-size:                $font-size-base * 1.25 ;
+$h5-font-size:                $font-size-base * 1;
+$h6-font-size:                $font-size-base * 1; 
+

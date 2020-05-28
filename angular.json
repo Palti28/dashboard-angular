@@ -93,10 +93,15 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/fonts/DINNextLTPro-Light.otf",
+              "src/assets/fonts/DINNextLTPro-Bold.otf",
+              "src/assets/fonts/DINNextLTPro-Regular.otf",
+              "src/assets/fonts/DINNextLTPro-Medium.otf"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/styles/abstracts/typography.scss"
             ],
             "scripts": []
           }

@@ -7,6 +7,11 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class ButtonsComponent implements OnInit {
 
+
+  printSyntax(){
+    return this.codeButtonBasic, this.codeButtonGroup;
+  }
+
   codeButtonBasic =
   `
   <button type="button" class="btn dk-btn-primary" color="primary" mdbWavesEffect>primary</button>
@@ -23,9 +28,11 @@ export class ButtonsComponent implements OnInit {
   </div>
   `
 
+
   constructor() { }
 
   ngOnInit(): void {
+    this.printSyntax()
   }
 
 }
