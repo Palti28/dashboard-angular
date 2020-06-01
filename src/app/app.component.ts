@@ -18,6 +18,36 @@ export class AppComponent implements AfterViewInit{
 
   navItems: NavItem[] = [
     {
+      headingName: 'Get Started ',
+      displayName: 'DOKU Design',
+      route: 'getstarted',
+      iconName: 'archway',
+      children:[
+        {
+          displayName: 'About Doku Design',
+          route: 'getstarted/about',
+          iconName: 'gem'
+        },
+        {
+          displayName: 'Design',
+          route: 'getstarted/design',
+          iconName: 'pencil-ruler'
+        },
+        {
+          displayName: 'Develop',
+          route: 'getstarted/develop',
+          iconName: 'code'
+        }
+      ]
+    },
+    {
+      headingName: 'General',
+      displayName: 'Dashboard',
+      route: 'dashboard',
+      iconName: 'compass',
+    },
+    {
+      headingName: 'avs',
       displayName: 'Components',
       route:'components',
       iconName:'ad',
@@ -31,24 +61,7 @@ export class AppComponent implements AfterViewInit{
           displayName: 'Forms',
           route:'components/forms',
           iconName: 'check'
-        },
-        // {
-        //   displayName: 'Child-2',
-        //   route:'components/child2',
-        //   iconName:'',
-        //   children:[
-        //     {
-        //       displayName: 'Loader',
-        //       route:'components/child2/loaders',
-        //       iconName: 'check'
-        //     },
-        //     {
-        //       displayName: 'Badge',
-        //       route:'components/child2/badges',
-        //       iconName: 'check'
-        //     }
-        //   ]
-        // }
+        }
       ]
     },
     {
@@ -56,6 +69,61 @@ export class AppComponent implements AfterViewInit{
       route:'sample-pages',
       iconName:'anchor',
       children:[
+        {
+          displayName: 'Login Pages',
+          route:'sample-pages/login',
+          iconName: 'bars'
+          
+        },
+        {
+          displayName: 'Page Not Found',
+          route:'sample-pages/page-not-found',
+          iconName:'anchor'
+        },
+        {
+          displayName: 'Login Pages',
+          route:'sample-pages/login',
+          iconName: 'bars'
+          
+        },
+        {
+          displayName: 'Page Not Found',
+          route:'sample-pages/page-not-found',
+          iconName:'anchor'
+        },
+        {
+          displayName: 'Login Pages',
+          route:'sample-pages/login',
+          iconName: 'bars'
+          
+        },
+        {
+          displayName: 'Page Not Found',
+          route:'sample-pages/page-not-found',
+          iconName:'anchor'
+        },
+        {
+          displayName: 'Login Pages',
+          route:'sample-pages/login',
+          iconName: 'bars'
+          
+        },
+        {
+          displayName: 'Page Not Found',
+          route:'sample-pages/page-not-found',
+          iconName:'anchor'
+        },
+        {
+          displayName: 'Login Pages',
+          route:'sample-pages/login',
+          iconName: 'bars'
+          
+        },
+        {
+          displayName: 'Page Not Found',
+          route:'sample-pages/page-not-found',
+          iconName:'anchor'
+        },
         {
           displayName: 'Login Pages',
           route:'sample-pages/login',

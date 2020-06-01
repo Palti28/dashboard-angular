@@ -10,7 +10,7 @@
       >
 				<div id="dk_brand" class="brand flex-column-auto">
 					<a href="" class="brand-logo">
-						<img src="../../img/doku-logo.png" alt="">
+						<img src="../assets/doku-logo.png" alt="">
 						<div class="brand-text">DOKU Dashboard</div>
 						
 					</a>
@@ -24,132 +24,10 @@
 
 						<!-- ======================================== menu-nav == start -->
 						<ul class="menu-nav">
-							<!-- <li class="menu-item px-4 py-2">
-								<button type="button" class="btn btn-block btn-primary">Active your bisuness</button>
-							</li> -->
-
-							<li class="menu-item " aria-haspopup="true">
-								<a href="" class="menu-link">
-									<span class="menu-icon">
-										<i class="fas fa-chess-rook"></i>
-									</span>
-									<span class="menu-text">
-										Dashboard
-									</span>
-								</a>
-              </li>
-              
-							<li class="menu-section">
-								<span class="menu-text">Foundation</span>
-								<i class="fas fa-ellipsis-h icon-more"></i>
-              </li>
-
-              <app-menu-list-item *ngFor="let item of navItems" [item]="item" [isAsideMinimized]="asideMinimized" [isAsideHovered]="asideMinimizedHover"></app-menu-list-item>
-
-							<!-- menu component == start ==== -->
-							<li class="menu-item menu-item-submenu menu-item-open">
-								<a class="menu-link menu-toggle collapsed" data-toggle="collapse" href="#collapseExample2" role="button"
-									aria-expanded="false" aria-controls="collapseExample2">
-									<span class="menu-icon">
-										<i class="fas fa-chess-rook"></i>
-									</span>
-									<span class="menu-text">
-										Components
-									</span>
-									<span class="menu-arrow">
-										<i class="fa menu-arrow"></i>
-									</span>
-								</a>
-								<!-- sub-menu -->
-								<div class="collapse menu-submenu" id="collapseExample2" data-parent="#dk_aside_menu">
-									<ul class="menu-subnav">
-										<li class="menu-item menu-item-submenu">
-											<a href="#" class=" submenu-link">
-												<span class="menu-bullet">
-													<i class="far fa-circle"></i>
-												</span>
-												<span class="menu-text">
-													sub menu dashboard
-												</span>
-											</a>
-											<a href="#" class=" submenu-link">
-												<span class="menu-bullet">
-													<i class="far fa-circle"></i>
-												</span>
-												<span class="menu-text">
-													sub menu dashboard 2
-												</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</li>
-							<!-- menu component == end ==== -->
-
-							<li class="menu-section">
-								<span class="menu-text">Generals</span>
-								<i class="fas fa-ellipsis-h icon-more"></i>
-							</li>
-
-							<!-- menu examplepage == start ==== -->
-							<li class="menu-item " aria-haspopup="true">
-								<a href="" class="menu-link">
-									<span class="menu-icon">
-										<i class="fas fa-book"></i>
-									</span>
-									<span class="menu-text">
-										Utility
-									</span>
-								</a>
-							</li>
-							<li class="menu-item " aria-haspopup="true">
-								<a href="" class="menu-link">
-									<span class="menu-icon">
-										<i class="fas fa-chess-rook"></i>
-									</span>
-									<span class="menu-text">
-										Dashboard
-									</span>
-								</a>
-							</li>
-							<li class="menu-item menu-item-submenu menu-item-open">
-								<a class="menu-link menu-toggle collapsed" data-toggle="collapse" href="#collapseExample3" role="button"
-									aria-expanded="false" aria-controls="collapseExample3">
-									<span class="menu-icon">
-										<i class="fas fa-archive"></i>
-									</span>
-									<span class="menu-text">
-										Component
-									</span>
-									<span class="menu-arrow">
-										<i class="fa menu-arrow"></i>
-									</span>
-								</a>
-								<!-- sub-menu -->
-								<div class="collapse menu-submenu" id="collapseExample3" data-parent="#dk_aside_menu">
-									<ul class="menu-subnav">
-										<li class="menu-item menu-item-submenu">
-											<a href="#" class=" submenu-link">
-												<span class="menu-bullet">
-													<i class="far fa-circle"></i>
-												</span>
-												<span class="menu-text">
-													Login
-												</span>
-											</a>
-											<a href="#" class=" submenu-link">
-												<span class="menu-bullet">
-													<i class="far fa-circle"></i>
-												</span>
-												<span class="menu-text">
-													Bank Logo
-												</span>
-											</a>
-										</li>
-									</ul>
-								</div>
-							</li>
-							<!-- menu examplepage == start ==== -->
+							<!-- menu content start -->
+							<app-menu-list-item *ngFor="let item of navItems" [item]="item" [isAsideMinimized]="asideMinimized" [isAsideHovered]="asideMinimizedHover"></app-menu-list-item>
+							<!-- menu content end -->
+							
 						</ul>
 						<!-- ======================================== menu nav == end -->
 					</div>
@@ -158,7 +36,6 @@
 
 			<!-- content wrapper (right) -->
 			<div id="dk_wrapper" class="d-flex flex-column flex-row-fluid wrapper">
-
 				<!-- header == start -->
 				<div id="dk_header" class="header  header-fixed ">
 					<div class="container-fluid  d-flex align-items-stretch justify-content-between">
@@ -280,7 +157,6 @@
 						<div class="container-fluid">
 							<!-- ======================================== entry-content ======================================== start -->
 							<router-outlet>
-
               </router-outlet>
 							<!-- ======================================== entry-content ======================================== end -->
 						</div>
@@ -291,10 +167,4 @@
 			<!-- content wrapper (right) -->
 		</div>
 	</div>
-
-	<!-- <script src="../../js/jquery-3.3.1.min.js"></script> -->
-	<!-- Popper and Bootstrap JS -->
-	<!-- <script src="../../js/popper.min.js"></script>
-	<script src="../../js/bootstrap.min.js"></script>
-	<script src="./newDashboard.js"></script> -->
 </body>

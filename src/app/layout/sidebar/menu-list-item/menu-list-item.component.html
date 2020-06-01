@@ -1,22 +1,47 @@
+<!-- 
+	<li class="menu-item " aria-haspopup="true" >
+    <a href="" class="menu-link">
+      <span class="menu-icon">
+        <i class="fas fa-chess-rook"></i>
+      </span>
+      <span class="menu-text">
+        {{item.headingName}}
+      </span>
+    </a>
+  </li> -->
 
+<!-- heading menu start -->
+<li *ngIf="item.headingName" class="menu-section">
+  <span class="menu-text">{{item.headingName}}</span>
+  <i class="fas fa-ellipsis-h icon-more"></i>
+</li>
+<!-- heading menu end -->
+
+<!-- menu start -->
 <li class="menu-item menu-item-submenu menu-item-open">
-  <a class="menu-link menu-toggle collapsed" role="button" [ngStyle]="{'padding-left': ((depth * 12) + 25) + 'px'}"  [routerLink]="item.route" (click)="onItemSelected(item)"
-    aria-expanded="false" aria-controls="collapseExample">
+  <a class="menu-link menu-toggle collapsed" role="button" [ngStyle]="{'padding-left': ((depth * 12) + 25) + 'px'}"
+    [routerLink]="item.route" (click)="onItemSelected(item)" aria-expanded="false" aria-controls="collapseExample">
     <span class="menu-icon">
       <!-- <i class="fas fa-chess-rook"></i> -->
-      <i class="fa" [ngStyle]="{'margin-right': (item.iconName !== '') ? '' :'16px'} "  [className]="'fa fa-'+ item.iconName"></i>
+      <i class="fa" [ngStyle]="{'margin-right': (item.iconName !== '') ? '' :'16px'} "
+        [className]="'fa fa-'+ item.iconName"></i>
     </span>
     <span class="menu-text">
       {{item.displayName}}
     </span>
     <span *ngIf="item.children && item.children.length" class="menu-arrow">
-        <i class="fa menu-arrow"></i>
+      <i class="fa menu-arrow"></i>
     </span>
-    
+
   </a>
 </li>
+<!-- menu end -->
+
+<!-- menu children start -->
 <div *ngIf="expanded">
   <!-- <app-menu-list-item *ngFor="let child of item.children" [item]="child" [depth]="depth+1" [ngStyle]="{'display' :!isAsideMinimized ? 'flex' : 'none'}"> -->
   <app-menu-list-item *ngFor="let child of item.children" [item]="child" [depth]="depth+1" [ngClass]="isDisplay()">
   </app-menu-list-item>
 </div>
+<!-- menu children end -->
+
