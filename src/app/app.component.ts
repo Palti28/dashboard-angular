@@ -140,6 +140,8 @@ export class AppComponent implements AfterViewInit{
   ]
 
   //  = false;
+
+  // check screen size - start
   screenMobile: boolean = false;
   ngOnInit(){
     if(this.screenMobileWidth.matches){
@@ -148,11 +150,11 @@ export class AppComponent implements AfterViewInit{
       console.log(this.screenMobile)
     }else{
       this.screenMobile = false
-      console.log('tidak')
       console.log(this.screenMobile)
-
     }
   }
+  // check screen size - end
+
 
   checkScreenSize(){
     if(this.screenMobileWidth.matches){
@@ -161,23 +163,18 @@ export class AppComponent implements AfterViewInit{
       console.log(this.screenMobile)
     }else{
       this.screenMobile = false
-      console.log('tidak')
       console.log(this.screenMobile)
-
     }
   }
-
-
 
   ngAfterViewInit() {
     this.navService.appDrawer = this.appDrawer;
   }
     
-
-
+  
   showNavBar: boolean = false;
   show: boolean = false;
-  
+  // toggle navbar - start
   toggleNavbar(){
     if(this.showNavBar == false){
       this.showNavBar = true;
@@ -185,6 +182,9 @@ export class AppComponent implements AfterViewInit{
       this.showNavBar = false
     }
   }
+  // toggle navbar - end
+
+  // toggle dropdown collapse menu - start
   showChildMenu(){
     if(this.show == false){
      this.show = true;
@@ -192,7 +192,10 @@ export class AppComponent implements AfterViewInit{
       this.show = false
     }
   }
+  // toggle dropdown collapse menu - start
 
+
+  // toggle aside menu - start
   asideMinimized: boolean = false;
 
   toggleAside(){
@@ -201,9 +204,10 @@ export class AppComponent implements AfterViewInit{
     } else{
       this.asideMinimized = true;
     }
-    // window.alert('bisa')
   }
+  // toggle aside menu - end
 
+// handle aside toggled on hover - start
   asideMinimizedHover: boolean = false;
   hoverAside(ishover :boolean){
    if(this.asideMinimized){
@@ -214,52 +218,34 @@ export class AppComponent implements AfterViewInit{
      }
    }
   }
+// handle aside toggled on hover - start
 
+//add class 'asode-minimized if aside is minimized' - start
   handleAside(){
     if(this.asideMinimized == true){
       return('aside-minimized')
     }else{
       return('')
-
     }
   }
+//add class 'asode-minimized if aside is minimized' - end
 
+
+// toggle mobile navbar on mobile - start
   mobileNavbarShow: boolean = false;
   toggleAsideMobile(){
     if(this.mobileNavbarShow == false){
       this.mobileNavbarShow = true
     console.log(this.mobileNavbarShow,'toggle')
-    }
-    
+    } 
   }
+// toggle mobile navbar on mobile - end
 
+// close navbar on mobile - start
   closeNavbar(){
     this.mobileNavbarShow = false
   }
-
-  // @ViewChild("dk_aside") dkAside: ElementRef;
-  // @HostListener('document:click', ['$event'])
-  // clickOutside(){
-  //   console.log('jalanni')
-  //   if(this.screenMobile == true){
-  //     console.log('mobile view')
-  //     if(!this.dkAside.nativeElement.contains(event.target)){
-  //       console.log('click di luar')
-  //       if(this.mobileNavbarShow==true){
-  //         console.log('close navbar')
-  //         this.mobileNavbarShow = false
-
-  //       }else{
-  //         this.mobileNavbarShow = true;
-  //       }
-  //     }else{
-  //       console.log('click di dalam')
-  //     }
-  //   }else{
-  //     return false
-  //   }
-    
-  // }
+// close navbar on mobile - end
 
   constructor(public navService: NavService) {}
 
