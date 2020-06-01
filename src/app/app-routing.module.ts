@@ -13,6 +13,12 @@ const routes: Routes = [
   {path: '', redirectTo: '/dashboard', pathMatch:'full'},
   // {path:'**', component: PageNotFoundComponent},
 
+  {path: 'getstarted', children: [
+    {path:'',redirectTo:'about', pathMatch:'full'},
+    {path: 'about' , component: ButtonsComponent},
+    {path: 'design' , component: ButtonsComponent},
+    {path: 'develop' , component: ButtonsComponent}
+  ]},
   {path: 'components', children: [
     //empty path used for redirect to first child automatically 
     {path: '', redirectTo:'buttons', pathMatch:'full'},

@@ -17,6 +17,7 @@ import { MenuListItemComponent } from './layout/sidebar/menu-list-item/menu-list
 import { NavService } from './layout/sidebar/nav.service';
 import { LoadersComponent } from './shared/components/loaders/loaders.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CollapseComponent } from './shared/components/collapse/collapse.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     PageNotFoundComponent,
     LoginComponent,
     MenuListItemComponent,
-    LoadersComponent
+    LoadersComponent,
+    CollapseComponent
   ],
   imports: [
     BrowserModule,
