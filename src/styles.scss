@@ -67,6 +67,7 @@ pre{
 #dk_aside {
   z-index: 99;
   border: 1px solid #e6eef5;
+  box-shadow: 1px 0px 7px 0px #00000017;
 }
 
 #dk_aside_menu {
@@ -193,19 +194,11 @@ pre{
 
 
 // ============= handle aside fixed(normal state) =============
-// .aside-fixed {
-//   &.aside-minimized {
-//     .wrapper {
-//       // padding-left: 70px;
-//     }
-//   }
-
-// }
 
 // aside
 .aside {
   background-color: #ffffff;
-  // width: 265px;
+  box-shadow: 1px 0 5px #e9e9e9;
 
 }
 
@@ -276,13 +269,19 @@ pre{
       //handle menu - toggle color
       .menu-link.menu-toggle {
         font-weight: bolder;
-        color: red;
+        // color: red;
+        color: #3a3a3a;
+
         padding: 11px 25px;
         align-items: stretch;
 
         &.collapsed {
           font-weight: normal;
           color: #4D4D4D;
+        }
+
+        &.expanded{
+          color: #E1251B;
         }
       }
 
@@ -589,7 +588,7 @@ pre{
 .card{
   margin: 1rem 0;
   border-radius: 8px;
-  border-color: $card-border-color;
+  border-color: #ececec;
   .card-body{
     padding:1.5rem 1.5rem ;
   }

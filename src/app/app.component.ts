@@ -192,12 +192,12 @@ export class AppComponent implements AfterViewInit{
       this.show = false
     }
   }
-  // toggle dropdown collapse menu - start
+  // toggle dropdown collapse menu - end
 
 
   // toggle aside menu - start
   asideMinimized: boolean = false;
-
+  
   toggleAside(){
     if(this.asideMinimized == true){
       this.asideMinimized = false
@@ -218,7 +218,7 @@ export class AppComponent implements AfterViewInit{
      }
    }
   }
-// handle aside toggled on hover - start
+// handle aside toggled on hover - end
 
 //add class 'asode-minimized if aside is minimized' - start
   handleAside(){

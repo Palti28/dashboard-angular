@@ -1,14 +1,4 @@
-<!-- 
-	<li class="menu-item " aria-haspopup="true" >
-    <a href="" class="menu-link">
-      <span class="menu-icon">
-        <i class="fas fa-chess-rook"></i>
-      </span>
-      <span class="menu-text">
-        {{item.headingName}}
-      </span>
-    </a>
-  </li> -->
+
 
 <!-- heading menu start -->
 <li *ngIf="item.headingName" class="menu-section">
@@ -19,7 +9,7 @@
 
 <!-- menu start -->
 <li class="menu-item menu-item-submenu menu-item-open">
-  <a class="menu-link menu-toggle collapsed" role="button" [ngStyle]="{'padding-left': ((depth * 12) + 25) + 'px'}"
+  <a class="menu-link menu-toggle " role="button" [ngStyle]="{'padding-left': ((depth * 12) + 25) + 'px'}" [ngClass]="{'expanded': expanded}"
     [routerLink]="item.route" (click)="onItemSelected(item)" aria-expanded="false" aria-controls="collapseExample">
     <span class="menu-icon">
       <!-- <i class="fas fa-chess-rook"></i> -->

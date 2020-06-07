@@ -18,6 +18,9 @@ import { NavService } from './layout/sidebar/nav.service';
 import { LoadersComponent } from './shared/components/loaders/loaders.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CollapseComponent } from './shared/components/collapse/collapse.component';
+import { AboutDokuComponent } from './modules/get-started/about-doku/about-doku.component';
+import { DesignDokuComponent } from './modules/get-started/design-doku/design-doku.component';
+import { DevelopDokuComponent } from './modules/get-started/develop-doku/develop-doku.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { CollapseComponent } from './shared/components/collapse/collapse.compone
     LoginComponent,
     MenuListItemComponent,
     LoadersComponent,
-    CollapseComponent
+    CollapseComponent,
+    AboutDokuComponent,
+    DesignDokuComponent,
+    DevelopDokuComponent
   ],
   imports: [
     BrowserModule,
