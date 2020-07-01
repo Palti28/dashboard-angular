@@ -4,7 +4,7 @@
 @import './styles/abstracts/variables';
 @import './styles/abstracts/typography';
 
-@import '~bootstrap/scss/bootstrap';
+// @import '~bootstrap/scss/bootstrap';
 
 //import custom scss after bootstrap to override bootstrap style
 
@@ -16,14 +16,19 @@ body {
   font-size: .95rem;
   background-color: #f5f8fb;
   font-family: $font-reg;
+
+  //required for handle iFrame height
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .btn.dropdown {
   box-shadow: none;
 }
 
-pre{
-    font-size: 0.8rem;
+pre {
+  font-size: 0.8rem;
 }
 
 .display-flex {
@@ -32,18 +37,18 @@ pre{
   display: flex;
 }
 
-.flex-column {
-  -webkit-box-orient: vertical !important;
-  -webkit-box-direction: normal !important;
-  -ms-flex-direction: column !important;
-  flex-direction: column !important;
+// .flex-column {
+//   -webkit-box-orient: vertical !important;
+//   -webkit-box-direction: normal !important;
+//   -ms-flex-direction: column !important;
+//   flex-direction: column !important;
 
-  &-auto {
-    -webkit-box-flex: 0;
-    -ms-flex: none;
-    flex: none;
-  }
-}
+//   &-auto {
+//     -webkit-box-flex: 0;
+//     -ms-flex: none;
+//     flex: none;
+//   }
+// }
 
 .flex-row-fluid {
   -webkit-box-flex: 1;
@@ -280,7 +285,7 @@ pre{
           color: #4D4D4D;
         }
 
-        &.expanded{
+        &.expanded {
           color: #E1251B;
         }
       }
@@ -311,24 +316,24 @@ pre{
         }
 
         //handle chevron right + down
-       
+
+        .menu-arrow {
+          transition: transform 0.3s;
+
+          .fa {
+            &:before {
+              content: "\f078";
+            }
+          }
+        }
+
+        &.collapsed {
           .menu-arrow {
             transition: transform 0.3s;
-
-            .fa {
-              &:before {
-                content: "\f078";
-              }
-            }
+            transform: rotateZ(-45deg);
           }
+        }
 
-          &.collapsed {
-            .menu-arrow {
-              transition: transform 0.3s;
-              transform: rotateZ(-45deg);
-            }
-          }
-        
 
         &[data-toggle="collapse"] {
           .menu-arrow {
@@ -469,14 +474,26 @@ pre{
 
 //=========  wrapper main content =========
 .wrapper {
-  padding-top: 48px;
+  // padding-top: 48px;
+  // for Iframe
+  padding-top: 64px;
+  // for Iframe
+  overflow: hidden;
 
   .container {
     padding: 0 25px;
   }
 
-  .content {
-    padding: 31px 16px;
+  >.content {
+    // padding: 31px 16px;
+    //for Iframe height
+    flex: 1;
+    padding: 0px 0px;
+
+    //for Iframe height
+    .main-content {
+      flex: 1;
+    }
   }
 }
 
@@ -542,6 +559,7 @@ pre{
     left: -295px;
   }
 }
+
 // =========== handle Mobile-Tablet Screen Size ===========
 
 
@@ -581,19 +599,38 @@ pre{
     }
   }
 }
+
 // =========== handle Desktop Screen Size ===========
 
 
 // custom
-.card{
+.card {
   margin: 1rem 0;
   border-radius: 8px;
   border-color: #ececec;
-  .card-body{
-    padding:1.5rem 1.5rem ;
+
+  .card-body {
+    padding: 1.5rem 1.5rem;
   }
 }
 
+.alert {
+  .top-right {
+    position: relative
+  }
+}
 
-/* Importing Bootstrap SCSS file. */
-// @import 'http://dev.dokupay.com/doku-ui-framework/doku/stylesheet/css/main.css';
+/* Importing DOKU css. */
+@import 'https://cdn-dev.oss-ap-southeast-5.aliyuncs.com/doku-ui-framework/doku/stylesheet/css/main.css';
+
+// hanlde component changes for Iframe
+.modal-backdrop {
+  background-color: transparent;
+}
+
+// fix toast 
+.alert {
+  .top-right {
+    position: relative
+  }
+}

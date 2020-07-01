@@ -4,7 +4,7 @@
 <body id="dk_body" class="header-fixed aside-enabled aside-fixed" (window:resize)="checkScreenSize()" [ngClass]="{'aside-minimized': asideMinimized, 'aside-minimized-hover': asideMinimizedHover, 'dk-mobile': screenMobile, 'mobile-navbar-show':mobileNavbarShow  }">
 <!-- <body #dk_body class="header-fixed aside-enabled aside-fixed" [ngClass]="handleAside()"> -->
 	<div class="d-flex flex-column flex-root">
-		<div class="d-flex flex-row flex-column-fluid page">
+		<div class="d-flex flex-row flex-column-fluid page flex-root">
       <div #dk_aside class="aside aside-left aside-fixed  d-flex flex-column flex-row-auto"
         (mouseenter)="hoverAside(true)" (mouseleave)="hoverAside(false)" [ngStyle]="{'left' : mobileNavbarShow ? '0px' : ''}"
       >
@@ -39,6 +39,7 @@
 				<!-- header == start -->
 				<div id="dk_header" class="header  header-fixed ">
 					<div class="container-fluid  d-flex align-items-stretch justify-content-between">
+						
 						<div class="topbar ">
 							<button class="btn btn-default btn-icon borderless" (click)="toggleAsideMobile()">
 								<i class="fas fa-sliders-h"></i>
@@ -154,7 +155,9 @@
 				<!-- main content == start -->
 				<div id="dk_content" class="content d-flex flex-column flex-column-fluid">
 					<div class="main-content d-flex flex-column-fluid">
-						<div class="container-fluid">
+						<!-- <div class="container-fluid"> -->
+						<div class="p-0" style="width: 100%;">
+
 							<!-- ======================================== entry-content ======================================== start -->
 							<router-outlet>
               </router-outlet>

@@ -65,76 +65,76 @@ export class AppComponent implements AfterViewInit{
       ]
     },
     {
-      displayName:'Sample Page',
-      route:'sample-pages',
+      displayName:'Demo Page',
+      route:'demo-pages',
       iconName:'anchor',
       children:[
         {
-          displayName: 'Login Pages',
-          route:'sample-pages/login',
-          iconName: 'bars'
+          displayName: 'Iframe',
+          route:'demo-pages/iframe',
+          iconName: 'window-maximize'
           
         },
-        {
-          displayName: 'Page Not Found',
-          route:'sample-pages/page-not-found',
-          iconName:'anchor'
-        },
-        {
-          displayName: 'Login Pages',
-          route:'sample-pages/login',
-          iconName: 'bars'
+        // {
+        //   displayName: 'Page Not Found',
+        //   route:'sample-pages/page-not-found',
+        //   iconName:'anchor'
+        // },
+        // {
+        //   displayName: 'Login Pages',
+        //   route:'sample-pages/login',
+        //   iconName: 'bars'
           
-        },
-        {
-          displayName: 'Page Not Found',
-          route:'sample-pages/page-not-found',
-          iconName:'anchor'
-        },
-        {
-          displayName: 'Login Pages',
-          route:'sample-pages/login',
-          iconName: 'bars'
+        // },
+        // {
+        //   displayName: 'Page Not Found',
+        //   route:'sample-pages/page-not-found',
+        //   iconName:'anchor'
+        // },
+        // {
+        //   displayName: 'Login Pages',
+        //   route:'sample-pages/login',
+        //   iconName: 'bars'
           
-        },
-        {
-          displayName: 'Page Not Found',
-          route:'sample-pages/page-not-found',
-          iconName:'anchor'
-        },
-        {
-          displayName: 'Login Pages',
-          route:'sample-pages/login',
-          iconName: 'bars'
+        // },
+        // {
+        //   displayName: 'Page Not Found',
+        //   route:'sample-pages/page-not-found',
+        //   iconName:'anchor'
+        // },
+        // {
+        //   displayName: 'Login Pages',
+        //   route:'sample-pages/login',
+        //   iconName: 'bars'
           
-        },
-        {
-          displayName: 'Page Not Found',
-          route:'sample-pages/page-not-found',
-          iconName:'anchor'
-        },
-        {
-          displayName: 'Login Pages',
-          route:'sample-pages/login',
-          iconName: 'bars'
+        // },
+        // {
+        //   displayName: 'Page Not Found',
+        //   route:'sample-pages/page-not-found',
+        //   iconName:'anchor'
+        // },
+        // {
+        //   displayName: 'Login Pages',
+        //   route:'sample-pages/login',
+        //   iconName: 'bars'
           
-        },
-        {
-          displayName: 'Page Not Found',
-          route:'sample-pages/page-not-found',
-          iconName:'anchor'
-        },
-        {
-          displayName: 'Login Pages',
-          route:'sample-pages/login',
-          iconName: 'bars'
+        // },
+        // {
+        //   displayName: 'Page Not Found',
+        //   route:'sample-pages/page-not-found',
+        //   iconName:'anchor'
+        // },
+        // {
+        //   displayName: 'Login Pages',
+        //   route:'sample-pages/login',
+        //   iconName: 'bars'
           
-        },
-        {
-          displayName: 'Page Not Found',
-          route:'sample-pages/page-not-found',
-          iconName:'anchor'
-        }
+        // },
+        // {
+        //   displayName: 'Page Not Found',
+        //   route:'sample-pages/page-not-found',
+        //   iconName:'anchor'
+        // }
       ]
     }
   ]
@@ -147,10 +147,10 @@ export class AppComponent implements AfterViewInit{
     if(this.screenMobileWidth.matches){
       this.screenMobile = true
       this.asideMinimized = false
-      console.log(this.screenMobile)
+      // console.log(this.screenMobile)
     }else{
       this.screenMobile = false
-      console.log(this.screenMobile)
+      // console.log(this.screenMobile)
     }
   }
   // check screen size - end
@@ -160,10 +160,10 @@ export class AppComponent implements AfterViewInit{
     if(this.screenMobileWidth.matches){
       this.screenMobile = true
       this.asideMinimized = false
-      console.log(this.screenMobile)
+      // console.log(this.screenMobile)
     }else{
       this.screenMobile = false
-      console.log(this.screenMobile)
+      // console.log(this.screenMobile)
     }
   }
 

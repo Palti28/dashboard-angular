@@ -21,6 +21,12 @@ import { CollapseComponent } from './shared/components/collapse/collapse.compone
 import { AboutDokuComponent } from './modules/get-started/about-doku/about-doku.component';
 import { DesignDokuComponent } from './modules/get-started/design-doku/design-doku.component';
 import { DevelopDokuComponent } from './modules/get-started/develop-doku/develop-doku.component';
+import { ModalComponent } from './shared/components/modal/modal.component';
+import { TableComponent } from './shared/components/table/table.component';
+import { IframeComponent } from './modules/sample-pages/iframe/iframe.component';
+import { AlertComponent } from './shared/components/alert/alert.component';
+import { ToastComponent } from './shared/components/toast/toast.component';
+import { ToastService } from './shared/services/toast.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +44,12 @@ import { DevelopDokuComponent } from './modules/get-started/develop-doku/develop
     CollapseComponent,
     AboutDokuComponent,
     DesignDokuComponent,
-    DevelopDokuComponent
+    DevelopDokuComponent,
+    ModalComponent,
+    TableComponent,
+    IframeComponent,
+    AlertComponent,
+    ToastComponent
   ],
   imports: [
     BrowserModule,
