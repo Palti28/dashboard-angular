@@ -27,8 +27,8 @@ body {
   box-shadow: none;
 }
 
-pre {
-  font-size: 0.8rem;
+pre{
+    font-size: 0.8rem;
 }
 
 .display-flex {
@@ -285,7 +285,7 @@ pre {
           color: #4D4D4D;
         }
 
-        &.expanded {
+        &.expanded{
           color: #E1251B;
         }
       }
@@ -316,24 +316,24 @@ pre {
         }
 
         //handle chevron right + down
-
-        .menu-arrow {
-          transition: transform 0.3s;
-
-          .fa {
-            &:before {
-              content: "\f078";
-            }
-          }
-        }
-
-        &.collapsed {
+       
           .menu-arrow {
             transition: transform 0.3s;
-            transform: rotateZ(-45deg);
-          }
-        }
 
+            .fa {
+              &:before {
+                content: "\f078";
+              }
+            }
+          }
+
+          &.collapsed {
+            .menu-arrow {
+              transition: transform 0.3s;
+              transform: rotateZ(-45deg);
+            }
+          }
+        
 
         &[data-toggle="collapse"] {
           .menu-arrow {
@@ -484,14 +484,14 @@ pre {
     padding: 0 25px;
   }
 
-  >.content {
+  > .content {
     // padding: 31px 16px;
     //for Iframe height
     flex: 1;
     padding: 0px 0px;
 
     //for Iframe height
-    .main-content {
+    .main-content{
       flex: 1;
     }
   }
@@ -559,7 +559,6 @@ pre {
     left: -295px;
   }
 }
-
 // =========== handle Mobile-Tablet Screen Size ===========
 
 
@@ -599,38 +598,29 @@ pre {
     }
   }
 }
-
 // =========== handle Desktop Screen Size ===========
 
 
 // custom
-.card {
+.card{
   margin: 1rem 0;
   border-radius: 8px;
   border-color: #ececec;
-
-  .card-body {
-    padding: 1.5rem 1.5rem;
+  .card-body{
+    padding:1.5rem 1.5rem ;
   }
 }
 
-.alert {
-  .top-right {
-    position: relative
-  }
-}
 
 /* Importing DOKU css. */
 @import 'https://cdn-dev.oss-ap-southeast-5.aliyuncs.com/doku-ui-framework/doku/stylesheet/css/main.css';
 
 // hanlde component changes for Iframe
-.modal-backdrop {
+.modal-backdrop{
   background-color: transparent;
 }
 
 // fix toast 
-.alert {
-  .top-right {
-    position: relative
-  }
+.alert .top-right{
+  position: relative
 }
