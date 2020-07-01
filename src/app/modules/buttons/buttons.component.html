@@ -1,93 +1,414 @@
 <!--  -->
 <!-- Always start with element class row  -->
-<div class="row">
-  <div class="card">
-    <div class="card-body">
-      <h1>Buttons</h1>
-      <p>
-        Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various
-        needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a
-        flow.
-      </p>
+<div class="container-fluid pt-3">
+  <div class="d-flex flex-column">
+
+    <div class="card">
+      <div class="card-body">
+        <h1>Buttons</h1>
+        <p>
+          Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various
+          needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a
+          flow.
+        </p>
+      </div>
     </div>
+    <div class="card w-100">
+      <div class="card-body ">
+        <button type="button" class="btn btn-secondary"> SECONDARY </button>
+        <button type="button" class="btn btn-success"> SUCCESS </button>
+        <button type="button" class="btn btn-info"> INFO </button>
+        <button type="button" class="btn btn-warning"> WARNING </button>
+        <button type="button" class="btn btn-danger"> DANGER </button>
+        <button type="button" class="btn btn-link"> LINK BUTTON </button>
+      </div>
+    </div>
+
+    <div class="card w-100">
+      <div class="card-body ">
+        <span>Alert</span>
+        <div>
+          dissmisable
+          <div class="alert alert-success alert-dismissible fade show" *ngIf="showAlert" role="alert">
+            <div class="content">
+              <strong> Success Alert </strong> - Here's you can see a success alert
+            </div>
+            <div>
+              <button type="button" class="close" (click)="closeAlert()" aria-label="Close">
+                <span aria-hidden="true"> &times; </span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        Just html
+        <div>
+          <div class="alert alert-success" ngbTooltip="tooltip example" role="alert">
+            <div>
+              <i class="fas fa-check-circle in-icon"></i>
+            </div>
+            <div>
+              <strong> Success Alert </strong> - Here's you can see a success alert
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Call function autoClosealert(selected id alert, duration of the show alert) to make auto close alert-->
+        toast alert html js <br>
+        <button type="button" class="btn btn-primary" (click)="show = true">
+          Right - Top
+        </button>
+        <!--Add top-right class to make top-right positioning alert-->
+        <div id="rightTopAlert" *ngIf="show">
+          <div class="alert alert-success alert-flag top-right" role="alert">
+            <div>
+              <i class="fas fa-check-circle in-icon"></i>
+            </div>
+            <div>
+              <strong> Success Alert </strong> - Here's you can see a success alert
+            </div>
+          </div>
+        </div>
+        
+        
+        <br>
+        <br>ngb component
+        <!-- ngb alert -->
+        <p>
+          <ngb-alert [dismissible]="false" >
+            <strong>Warning!</strong> Better check yourself, you're not looking too good.
+          </ngb-alert>
+        </p>
+        <br>
+        call custom component <br>
+        <!-- dk-alert -->
+        <button class="btn btn-success" (click)="showSuccess('sukses nih gan')" ngbTooltip="Will disappear in 10s">Success toast</button>
+        <button class="btn btn-danger" (click)="showDanger()" ngbTooltip="Will disappear in 10s">Error toast</button>
+
+        <dk-toast aria-live="polite" aria-atomic="true"></dk-toast>
+      </div> <br>
+     
+
+    </div>
+
+    <div class="card w-100">
+      <div class="card-body ">
+        <span>Toast</span>
+        tweak ngb component css
+        <button class="btn btn-primary" (click)="showToast = true">
+          Toast example
+        </button>
+
+        <ngb-toast class="alert alert-success top-right" *ngIf="showToast" [delay]="3000"
+        [autohide]="autohide" (hide)="showToast = false; autohide = true">
+          <div>
+            <i class="fas fa-check-circle in-icon"></i>
+          </div>
+          <div>
+            <strong> Success Alert </strong> - Here's you can see a success alert
+          </div>
+          <!-- <div>
+            <button type="button" class="close" (click)="showToast = !showToast" aria-label="Close">
+              <span aria-hidden="true"> &times; </span>
+            </button>
+          </div> -->
+        </ngb-toast>
+      </div>
+    </div>
+
+    <div class="card w-100">
+      <div class="card-body ">
+        <span>Pop Over</span>
+        <button type="button" class="btn btn-outline-secondary mr-2" placement="top"
+          ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." popoverTitle="Popover on top">
+          Popover on top
+        </button>
+      </div>
+    </div>
+
+    <div class="card w-100">
+      <div class="card-body ">
+        <span>Tooltip</span>
+        <button type="button" class="btn btn-outline-secondary mr-2" placement="top" ngbPopover="Just three words.">
+          Popover on top
+        </button>
+      </div>
+    </div>
+
+    <div class="card w-100">
+      <div class="card-body ">
+        <span>Timeline</span>
+        <div class="mt-5">
+          <div class="timeline timeline-vertical timeline-primary">
+            <ul>
+              <li>
+                <div class="description">
+                  <div class="desc_title"> Pengisian Detail Rekening</div>
+                  <div class="desc_time"> 20 Feb 2020, 10:00PM </div>
+                </div>
+              </li>
+              <li>
+                <div class="description">
+                  <div class="desc_title"> Ferifikasi Data User</div>
+                  <div class="desc_time"> 20 Feb 2020, 10:10pm </div>
+                </div>
+              </li>
+              <li class="is-active">
+                <div class="description">
+                  <div class="desc_title"> Refund Sedang Diproses</div>
+                  <div class="desc_time"> 20 Feb 2020, 10:10pm </div>
+                </div>
+              </li>
+              <li>
+                <div class="description">
+                  <div class="desc_title"> Refund Sedang Diproses</div>
+                  <div class="desc_time"> 20 Feb 2020, 10:10pm </div>
+                </div>
+              </li>
+              <li>
+                <div class="description">
+                  <div class="desc_title"> Refund Sukses</div>
+                  <div class="desc_time"> 20 Feb 2020, 10:10pm </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card w-100">
+      <div class="card-body ">
+        <span>Spinner</span>
+        <div class="spinner-border text-primary spinner-sm mr-5" role="status"></div>
+        <div class="spinner-border text-success spinner-sm mr-5" role="status"></div>
+
+      </div>
+    </div>
+
+    <div class="card w-100">
+      <div class="card-body ">
+        <span>dropdown</span>
+        <div ngbDropdown class="d-inline-block dropdown">
+          <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1"
+            class="dropdown-menu dropdown-menu-right dropdown-notification">
+            <a class="dropdown-item" href="#">
+              <div class="notification-content">
+                <div class="icon">
+                  <i class="far fa-bell text-success"></i>
+                </div>
+                <div class="content">
+                  <div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. In totam
+                    explicabo</div>
+                  <div class="notification-time">
+                    6 minutes ago
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="dropdown-item" href="#">
+              <div class="notification-content">
+                <div class="icon">
+                  <i class="fas fa-check text-success "></i>
+                </div>
+                <div class="content">
+                  <div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. In totam
+                    explicabo</div>
+                  <div class="notification-time">
+                    6 minutes ago
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="dropdown-item" href="#">Show all notifications</a>
+          </div>
+
+        </div>
+        <div class="">
+          <div class="btn-group dropdown">
+            <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Notifications
+            </button>
+            <div class="dropdown-menu notification">
+              <a class="dropdown-item" href="#">
+                <div class="notification-content">
+                  <div class="icon">
+                    <i class="far fa-bell text-success"></i>
+                  </div>
+                  <div class="content">
+                    <div class="notification-detail"> Lorem ipsum dolor sit amet consectetur adipisicing elit. In totam
+                      explicabo </div>
+                    <div class="notification-time"> 6 minutes ago </div>
+                  </div>
+                </div>
+              </a>
+              <a class="dropdown-item" href="#">
+                <div class="notification-content">
+                  <div class="icon">
+                    <i class="far fa-bell text-success"></i>
+                  </div>
+                  <div class="content">
+                    <div class="notification-detail"> Lorem ipsum dolor sit amet consectetur adipisicing elit. In totam
+                      explicabo </div>
+                    <div class="notification-time"> 6 minutes ago </div>
+                  </div>
+                </div>
+              </a>
+              <a class="dropdown-item" href="#">Show all notifications</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="card w-100">
+      <div class="card-body ">
+        <span>Pop Over</span>
+        <div>
+          <span class="badge badge-success">
+            <i class="fas fa-check-circle in-icon"></i> Success
+          </span>
+          <span class="badge badge-warning">
+            <i class="fas fa-exclamation-circle in-icon"></i> Warning
+          </span>
+          <span class="badge badge-danger">
+            <i class="fas fa-times-circle in-icon"></i> Error
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card w-100">
+      <div class="card-body ">
+        <span>Modal</span>
+        <dk-modal></dk-modal>
+      </div>
+    </div>
+
+    <div class="card w-100">
+      <div class="card-body ">
+        <span>Input</span>
+        <div class="toggle-switch-element">
+          <div class="toggle-switch normal">
+            <input id="normal" type="checkbox" checked />
+            <label class="toggle-item" for="normal"></label>
+          </div>
+          <label class="toggle-label" for="switch">
+            Checked Toggle Label
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Textarea label</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text dk-span-group" id="basic-addon3">https://example.com/users/</span>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Textarea label</label>
+          <div class="input-group">
+            <input type="text" class="form-control dk-text-input" id="basic-url" placeholder="Default text">
+            <div class="input-group-append">
+              <button class="btn btn-primary dk-btn-group" type="button" id="button-addon1">Button</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card w-100">
+      <div class="card-body ">
+        <span>Checkbox</span>
+        <label class="checkbox horizontal">
+          <input type="checkbox" name="horizontal-check" value="1">
+          <span> Normal Checkbox </span>
+        </label>
+      </div>
+    </div>
+
+    <div class="card w-100">
+      <div class="card-body">
+        <span>Datepicker</span>
+        <!-- <ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker> -->
+        <br>
+        <form class="form-inline">
+          <div class="form-group">
+            <div class="input-group">
+              <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker
+                #d="ngbDatepicker">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="card w-100">
+      <div class="card-body">
+
+        <dk-table></dk-table>
+      </div>
+    </div>
+
   </div>
-</div>
 
-<div class="row ">
-  <div class="card w-100">
-    <div class="card-body ">
-      <ngb-tabset [destroyOnHide]="false">
-        <ngb-tab title="Design">
-          <ng-template ngbTabContent>
-            <div class="pt-3">
-              <h4>Guidance</h4> 
-              <p class="mt-2">
-                Buttons should indicate an action. Button labels express what action will occur when the user interacts
-                with it. <br>
-                They should be discoverable, easy to identify, and specific. <br>
-                Primary button always appear to the right and secondary appear to left of primary button. <br>
-                Always have a text label within the button container. Icons are optional. <br>
-                Make Buttons look and feel clickable. <br>
-                If using multiple Buttons, style and label them distinctly. <br>
-              </p>
-            </div>
-          </ng-template>
-        </ngb-tab>
-        <ngb-tab>
-          <ng-template ngbTabTitle>Code</ng-template>
-          <ng-template ngbTabContent>
-            <div class="row my-2">
-              <div class="col-12 dk-card">
-                <h5>Button Group</h5>
 
-                <button type="button" class="btn btn-outline-primary">Primary</button>
-                <button type="button" class="btn btn-outline-secondary">Secondary</button>
-                <button type="button" class="btn btn-outline-success">Success</button>
+  <div class="row ">
 
-                <div class="code">
-                  <pre><code class="language-html">{{codeButtonGroup}}</code></pre>
-                </div>
-              </div>
-            </div>
-            <div class="row my-2">
-              <div class="col-12 dk-card">
-                <h5>Button Text + Icon</h5>
-                <button type="button" class="btn dk-btn-primary" color="primary" mdbWavesEffect>
-                  Delete
-                  <i class="fas fa-trash-alt"></i>
-                </button>
-                <button type="button" class="btn dk-btn-success" color="secondary" mdbWavesEffect>
-                  Approve
-                  <i class="fas fa-check"></i>
-                </button>
-                <button type="button" class="btn dk-btn-warning" color="secondary" mdbWavesEffect>
-                  Edit
-                  <i class="fas fa-pen"></i>
-                </button>
+  </div>
 
-                <div class="code">
-                  <pre><code class="language-html">{{codeButtonBasic}}</code></pre>
-                </div>
-              </div>
-            </div>
+  <div class="row ">
 
-            <div class="row my-2">
-              <div class="col-12 dk-card">
-                <h5>Button Group</h5>
-                <div class="btn-group" role="group" aria-label="Basic example">
-                  <button type="button" class="btn dk-btn-primary">Left <i class="fas fa-check"></i></button>
-                  <button type="button" class="btn dk-btn-primary">Middle</button>
-                  <button type="button" class="btn dk-btn-primary">Right</button>
-                </div>
-                <div class="code">
-                  <pre><code class="language-html">{{codeButtonGroup}}</code></pre>
-                </div>
-              </div>
-            </div>
+  </div>
 
-          </ng-template>
-        </ngb-tab>
-      </ngb-tabset>
-    </div>
+  <div class="row ">
+
+  </div>
+
+  <div class="row ">
+
+  </div>
+
+  <div class="row ">
+
+  </div>
+  <div class="row ">
+
+  </div>
+  <div class="row ">
+
+  </div>
+  <div class="row ">
+
+  </div>
+  <div class="row ">
+
+  </div>
+
+  <div class="row ">
+
+  </div>
+
+  <div class="row ">
+
+  </div>
+
+  <div class="row">
+
+  </div>
+
+  <div class="row">
+
   </div>
 </div>

@@ -1,0 +1,18 @@
+.principles {
+  .col {
+    i{
+      color: #00A19B;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+}

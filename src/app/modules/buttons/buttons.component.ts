@@ -1,38 +1,57 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation,Directive, EventEmitter, Input, Output, QueryList, ViewChildren } from '@angular/core';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import {NgbDateStruct, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
+import { NavService } from 'src/app/layout/sidebar/nav.service';
+
+import {ToastService} from '../../shared/services/toast.service'
 
 @Component({
   selector: 'app-buttons',
   templateUrl: './buttons.component.html',
-  styleUrls: ['./buttons.component.scss']
+  styleUrls: ['./buttons.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
+
 export class ButtonsComponent implements OnInit {
 
-
-  printSyntax(){
-    return this.codeButtonBasic, this.codeButtonGroup;
+  model: NgbDateStruct;
+  date: {year: number, month: number};
+  showAlert: boolean = true;
+  show = false;
+  showToast = false;
+  autohide = true;
+ 
+  constructor(public NavService: NavService, public toastService : ToastService) {}
+  
+  ngAfterViewInit() {
+    
   }
 
-  codeButtonBasic =
-  `
-  <button type="button" class="btn dk-btn-primary" color="primary" mdbWavesEffect>primary</button>
-  <button type="button" class="btn dk-btn-success" color="secondary" mdbWavesEffect>success</button>
-  <button type="button"  class="btn dk-btn-warning" mdbWavesEffect>warning</button>
-  `
-
-  codeButtonGroup =
-  `
-  <div class="btn-group" role="group" aria-label="Basic example">
-    <button type="button" class="btn dk-btn-primary">Left</button>
-    <button type="button" class="btn dk-btn-primary">Middle</button>
-    <button type="button" class="btn dk-btn-primary">Right</button>
-  </div>
-  `
-
-
-  constructor() { }
-
   ngOnInit(): void {
-    this.printSyntax()
+  }
+
+  //table
+  
+  //alert
+  closeAlert(){
+    this.showAlert = !this.showAlert
+  }
+
+  //toast alert
+  showSuccess(text) {
+    this.toastService.show(text, {classname: "alert alert-success alert-flag top-right", icon: "fa-check-circle in-icon"});
+  }
+
+  showDanger() {
+    this.toastService.show('I am a Danger toast', {classname: 'alert alert-danger alert-flag top-right', icon: "fa-times-circle in-icon"});
+  }
+
+  showWarning(){
+    this.toastService.show('I am a standard toast', {classname: 'alert-warning alert-flag'});
+  }
+
+  showDark(){
+    this.toastService.show('I am a standard toast', {classname: 'alert-warning alert-flag'});
   }
 
 }

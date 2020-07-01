@@ -1,0 +1,8 @@
+
+  <ngb-alert [dismissible]="false" class="alert" *ngIf="showAlert">
+    <div *ngFor="let alert of alerts" [ngClass]="setClasses(alert)">
+      <ngb-alert *ngIf="alert && alert.type && alert.message" [type]="alert.type" (close)="showAlert = !showAlert">
+        <p [innerHTML]="alert.message"></p>
+      </ngb-alert>
+    </div>
+  </ngb-alert>
