@@ -8,6 +8,10 @@ import {PageNotFoundComponent} from './modules/sample-pages/page-not-found/page-
 import {LoginComponent} from './modules/sample-pages/login/login.component'
 import {LoadersComponent} from './modules/loaders/loaders.component'
 import {BadgeComponent} from './modules/badge/badge.component'
+import { AboutDokuComponent } from './modules/get-started/about-doku/about-doku.component';
+import { DesignDokuComponent } from './modules/get-started/design-doku/design-doku.component';
+import { DevelopDokuComponent } from './modules/get-started/develop-doku/develop-doku.component';
+import { IframeComponent } from './modules/sample-pages/iframe/iframe.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/dashboard', pathMatch:'full'},
@@ -15,9 +19,9 @@ const routes: Routes = [
 
   {path: 'getstarted', children: [
     {path:'',redirectTo:'about', pathMatch:'full'},
-    {path: 'about' , component: ButtonsComponent},
-    {path: 'design' , component: ButtonsComponent},
-    {path: 'develop' , component: ButtonsComponent}
+    {path: 'about' , component: AboutDokuComponent},
+    {path: 'design' , component: DesignDokuComponent},
+    {path: 'develop' , component: DevelopDokuComponent}
   ]},
   {path: 'components', children: [
     //empty path used for redirect to first child automatically 
@@ -31,9 +35,9 @@ const routes: Routes = [
     ]}
   ]},
 
-  {path:'sample-pages', children:[
-    {path: '', redirectTo:'login', pathMatch:'full'},
-    {path: 'login', component: LoginComponent}
+  {path:'demo-pages', children:[
+    {path: '', redirectTo:'iframe', pathMatch:'full'},
+    {path: 'iframe', component: IframeComponent}
   ]},
   {path:'dashboard', component: DashboardComponent}
 ];

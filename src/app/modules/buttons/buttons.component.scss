@@ -1,0 +1,21 @@
+.card-body > span{
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.toast-body{
+  padding: unset;
+  display: flex;
+}
+
+.toast.show{
+  display: flex;
+}
+
+.alert {
+  .top-right {
+    position: relative
+  }
+}
