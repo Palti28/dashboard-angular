@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastService } from '../../../shared/services/toast.service';
 
 @Component({
   selector: 'app-about-doku',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutDokuComponent implements OnInit {
 
-  constructor() { }
+  constructor(public toastS: ToastService) { }
 
   ngOnInit(): void {
+  }
+
+  showSuccess(text) {
+    this.toastS.show(text, {
+      classname: "alert alert-success alert-flag top-right",
+      icon: "fa-check-circle in-icon"
+    });
+  }
+
+  showDanger() {
+    this.toastS.show('I am a Danger toast', {
+      classname: 'alert alert-danger alert-flag top-right',
+      icon: "fa-times-circle in-icon"
+    });
   }
 
 }

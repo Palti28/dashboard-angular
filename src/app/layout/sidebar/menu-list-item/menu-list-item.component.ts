@@ -54,7 +54,6 @@ export class MenuListItemComponent implements OnInit {
       }else{
         this.expanded = false
       }
-      
     }
   }
 
@@ -66,6 +65,14 @@ export class MenuListItemComponent implements OnInit {
     }
     else{
       return ('d-none')
+    }
+  }
+
+  iconSize(depth){
+    if(depth > 0){
+      return 'small'
+    }else{
+      false;
     }
   }
 }
