@@ -1,6 +1,7 @@
 import {Component, ViewChild, ElementRef, ViewEncapsulation, AfterViewInit, HostListener} from '@angular/core';
 import {NavItem} from './layout/sidebar/nav-item'
 import {NavService} from './layout/sidebar/nav.service'
+import { SidebarItem } from './layout/sidebar-right-nav/sidebar-item';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,17 @@ export class AppComponent implements AfterViewInit{
   screenMobileWidth = window.matchMedia("(max-width: 991.98px");
   computerScreenWidth = window.matchMedia("(min-width: 992px)");
 
+
+  // sidebarItems : SidebarItem[] =[
+  //   {
+  //     displayName: 'allert',
+  //     routelink:'alert'
+  //   },
+  //   {
+  //     displayName: 'popuover',
+  //     routelink:'pop-over'
+  //   }
+  // ]
 
   navItems: NavItem[] = [
     {
@@ -55,12 +67,17 @@ export class AppComponent implements AfterViewInit{
         {
           displayName: 'Buttons',
           route:'components/buttons',
-          iconName: ''
+          iconName: 'circle'
         },
         {
-          displayName: 'Forms',
+          displayName: 'Random',
           route:'components/forms',
-          iconName: 'check'
+          iconName: 'circle'
+        },
+        {
+          displayName: 'Toast',
+          route:'components/toast',
+          iconName: 'circle'
         }
       ]
     },

@@ -2,32 +2,55 @@ import { Component, OnInit, ViewEncapsulation,Directive, EventEmitter, Input, Ou
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import {NgbDateStruct, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
 import { NavService } from 'src/app/layout/sidebar/nav.service';
-
+import {SidebarItem} from '../../layout/sidebar-right-nav/sidebar-item'
 import {ToastService} from '../../shared/services/toast.service'
+import { Person } from 'src/app/shared/interface/person';
+import { DataService } from 'src/app/shared/services/data.service';
 
 @Component({
   selector: 'app-buttons',
   templateUrl: './buttons.component.html',
   styleUrls: ['./buttons.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  // encapsulation: ViewEncapsulation.None
 })
 
 export class ButtonsComponent implements OnInit {
-
+  // @Input() item:SidebarItem;
   model: NgbDateStruct;
   date: {year: number, month: number};
   showAlert: boolean = true;
   show = false;
   showToast = false;
   autohide = true;
+
+    //ng-Select
+    people: Person[] = [];
+    selectedPersonId = '5a15b13c36e7a7f00cf0d7cb';
+    selectedSimpleItem = 'Two';
+    simpleItems = [];
+  
+  
  
-  constructor(public NavService: NavService, public toastService : ToastService) {}
+  constructor(public NavService: NavService, public toastService : ToastService, private dataService: DataService ) {}
+
+  // sideBarItems: SidebarItem[] = [
+  //   {
+  //     displayName: 'Allert',
+  //     route:'#allert'
+  //   },
+  //   {
+  //     displayName:'Pop Over',
+  //     route:'#pop-over'
+  //   }
+  // ]
   
   ngAfterViewInit() {
     
   }
 
   ngOnInit(): void {
+    this.dataService.getPeople().subscribe(items => this.people = items);
+        this.simpleItems = [true, 'Two', 3];
   }
 
   //table
@@ -53,5 +76,8 @@ export class ButtonsComponent implements OnInit {
   showDark(){
     this.toastService.show('I am a standard toast', {classname: 'alert-warning alert-flag'});
   }
+
+
+
 
 }

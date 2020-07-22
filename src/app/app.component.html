@@ -1,173 +1,179 @@
-
-
-
-<body id="dk_body" class="header-fixed aside-enabled aside-fixed" (window:resize)="checkScreenSize()" [ngClass]="{'aside-minimized': asideMinimized, 'aside-minimized-hover': asideMinimizedHover, 'dk-mobile': screenMobile, 'mobile-navbar-show':mobileNavbarShow  }">
-<!-- <body #dk_body class="header-fixed aside-enabled aside-fixed" [ngClass]="handleAside()"> -->
-	<div class="d-flex flex-column flex-root">
-		<div class="d-flex flex-row flex-column-fluid page flex-root">
+<body id="dk_body" class="header-fixed aside-enabled aside-fixed" (window:resize)="checkScreenSize()"
+  [ngClass]="{'aside-minimized': asideMinimized, 'aside-minimized-hover': asideMinimizedHover, 'dk-mobile': screenMobile, 'mobile-navbar-show':mobileNavbarShow  }">
+  <!-- <body #dk_body class="header-fixed aside-enabled aside-fixed" [ngClass]="handleAside()"> -->
+  <div class="d-flex flex-column flex-root">
+    <div class="d-flex flex-row flex-column-fluid page flex-root">
       <div #dk_aside class="aside aside-left aside-fixed  d-flex flex-column flex-row-auto"
-        (mouseenter)="hoverAside(true)" (mouseleave)="hoverAside(false)" [ngStyle]="{'left' : mobileNavbarShow ? '0px' : ''}"
-      >
-				<div id="dk_brand" class="brand flex-column-auto">
-					<a href="" class="brand-logo">
-						<img src="../assets/doku-logo.png" alt="">
-						<div class="brand-text">DOKU Dashboard</div>
-						
-					</a>
-					<span *ngIf="screenMobile"><i (click)="closeNavbar()" role="button" class="fa fa-times d-flex ml-5" aria-hidden="true"></i></span>
-					<div id="dk_aside_toggle" class="brand-toggle btn btn-sm px-0" (click)="toggleAside()">
-						<i id="toggle-aside" class="fas fa-sliders-h"></i>
-					</div>
-				</div>
-				<div id="dk_aside_menu_wrapper" class="aside-menu-wrapper flex-column-fluid">
-					<div id="dk_aside_menu" class="aside-menu my-3 scroll ps ps--active-y">
+        (mouseenter)="hoverAside(true)" (mouseleave)="hoverAside(false)"
+        [ngStyle]="{'left' : mobileNavbarShow ? '0px' : ''}">
+        <div id="dk_brand" class="brand flex-column-auto">
+          <a href="" class="brand-logo">
+            <img src="../assets/doku-logo.png" alt="">
+            <div class="brand-text">DOKU Dashboard</div>
 
-						<!-- ======================================== menu-nav == start -->
-						<ul class="menu-nav">
-							<!-- menu content start -->
-							<app-menu-list-item *ngFor="let item of navItems" [item]="item" [isAsideMinimized]="asideMinimized" [isAsideHovered]="asideMinimizedHover"></app-menu-list-item>
-							<!-- menu content end -->
-							
-						</ul>
-						<!-- ======================================== menu nav == end -->
-					</div>
-				</div>
-			</div>
+          </a>
+          <span *ngIf="screenMobile"><i (click)="closeNavbar()" role="button" class="fa fa-times d-flex ml-5"
+              aria-hidden="true"></i></span>
+          <div id="dk_aside_toggle" class="brand-toggle btn btn-sm px-0" (click)="toggleAside()">
+            <i id="toggle-aside" class="fas fa-sliders-h"></i>
+          </div>
+        </div>
+        <div id="dk_aside_menu_wrapper" class="aside-menu-wrapper flex-column-fluid">
+          <div id="dk_aside_menu" class="aside-menu my-3 scroll ps ps--active-y">
 
-			<!-- content wrapper (right) -->
-			<div id="dk_wrapper" class="d-flex flex-column flex-row-fluid wrapper">
-				<!-- header == start -->
-				<div id="dk_header" class="header  header-fixed ">
-					<div class="container-fluid  d-flex align-items-stretch justify-content-between">
-						
-						<div class="topbar ">
-							<button class="btn btn-default btn-icon borderless" (click)="toggleAsideMobile()">
-								<i class="fas fa-sliders-h"></i>
-							</button>
-						</div>
-						<!-- topbar == start -->
-						<div class="topbar">
-							<div class="btn-group mx-3 show">
-								<!-- dropdown-notification == start -->
-								<button class="btn btn-default btn-icon borderless dropdown-toggle dropdown-icon"
-									id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-									<i class="far fa-bell"></i>
-								</button>
-								<div class="dropdown-menu dropdown-menu-right dropdown-notification" x-placement="bottom-end"
-									style="position: absolute; transform: translate3d(-337px, 40px, 0px); top: 0px; left: 0px; will-change: transform;">
-									<a class="dropdown-item" href="#">
-										<div class="notification-content">
-											<div class="icon">
-												<i class="far fa-bell text-success	"></i>
-											</div>
-											<div class="content">
-												<div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
-													elit. In totam explicabo</div>
-												<div class="notification-time">
-													6 minutes ago
-												</div>
-											</div>
-										</div>
-									</a>
-									<a class="dropdown-item" href="#">
-										<div class="notification-content">
-											<div class="icon">
-												<i class="fas fa-check text-success "></i>
-											</div>
-											<div class="content">
-												<div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
-													elit. In totam explicabo</div>
-												<div class="notification-time">
-													6 minutes ago
-												</div>
-											</div>
-										</div>
-									</a>
-									<a class="dropdown-item" href="#">
-										<div class="notification-content">
-											<div class="icon">
-												<i class="fas fa-check text-success "></i>
-											</div>
-											<div class="content">
-												<div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
-													elit. In totam explicabo</div>
-												<div class="notification-time">
-													6 minutes ago
-												</div>
-											</div>
-										</div>
-									</a>
-									<a class="dropdown-item" href="#">
-										<div class="notification-content">
-											<div class="icon">
-												<i class="fas fa-check text-success "></i>
-											</div>
-											<div class="content">
-												<div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
-													elit. In totam explicabo</div>
-												<div class="notification-time">
-													6 minutes ago
-												</div>
-											</div>
-										</div>
-									</a>
-									<a class="dropdown-item" href="#">
-										<div class="notification-content">
-											<div class="icon">
-												<i class="fas fa-check text-success "></i>
-											</div>
-											<div class="content">
-												<div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
-													elit. In totam explicabo</div>
-												<div class="notification-time">
-													6 minutes ago
-												</div>
-											</div>
-										</div>
-									</a>
-									<a class="dropdown-item" href="#">Show all notifications</a>
-								</div>
-								<!-- dropdown-notification == end -->
-							</div>
-							<!-- dropdown-user == start -->
-							<div class="dropdown-user d-inline-block">
-								<div class="btn-group">
-									<div ngbDropdown class="d-inline-block">
-										<a role="button" class=" dropdown-toggle" id="dropdownBasic1" ngbDropdownToggle  data-toggle="dropdown"
-										aria-haspopup="true" aria-expanded="false">
-										<img class="img-responsive img-rounded" src="../assets/user-avatar.jpg" alt="User picture">
-									</a>
-										<div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-											<button ngbDropdownItem>Action - 1</button>
-											<button ngbDropdownItem>Another Action</button>
-											<button ngbDropdownItem>Something else is here</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- dropdown-user == end -->
-						</div>
-						<!-- topbar == end -->
-					</div>
-				</div>
-				<!-- header == end -->
+            <!-- ======================================== menu-nav == start -->
+            <ul class="menu-nav">
+              <!-- menu content start -->
+              <app-menu-list-item *ngFor="let item of navItems" [item]="item" [isAsideMinimized]="asideMinimized"
+                [isAsideHovered]="asideMinimizedHover"></app-menu-list-item>
+              <!-- menu content end -->
 
-				<!-- main content == start -->
-				<div id="dk_content" class="content d-flex flex-column flex-column-fluid">
-					<div class="main-content d-flex flex-column-fluid">
-						<!-- <div class="container-fluid"> -->
-						<div class="p-0" style="width: 100%;">
+            </ul>
+            <!-- ======================================== menu nav == end -->
+          </div>
+        </div>
+      </div>
 
-							<!-- ======================================== entry-content ======================================== start -->
-							<router-outlet>
+      <!-- content wrapper (right) -->
+      <div id="dk_wrapper" class="d-flex flex-column flex-row-fluid wrapper">
+        <!-- header == start -->
+        <!-- <div id="dk_header" class="header  header-fixed ">
+          <div class="container-fluid  d-flex align-items-stretch justify-content-between">
+
+            <div class="topbar ">
+              <button class="btn btn-default btn-icon borderless" (click)="toggleAsideMobile()">
+                <i class="fas fa-sliders-h"></i>
+              </button>
+            </div>
+         
+            <div class="topbar">
+              <div class="btn-group mx-3 show">
+                <button class="btn btn-default btn-icon borderless dropdown-toggle dropdown-icon"
+                  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  <i class="far fa-bell"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right dropdown-notification" x-placement="bottom-end"
+                  style="position: absolute; transform: translate3d(-337px, 40px, 0px); top: 0px; left: 0px; will-change: transform;">
+                  <a class="dropdown-item" href="#">
+                    <div class="notification-content">
+                      <div class="icon">
+                        <i class="far fa-bell text-success	"></i>
+                      </div>
+                      <div class="content">
+                        <div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. In totam explicabo</div>
+                        <div class="notification-time">
+                          6 minutes ago
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <div class="notification-content">
+                      <div class="icon">
+                        <i class="fas fa-check text-success "></i>
+                      </div>
+                      <div class="content">
+                        <div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. In totam explicabo</div>
+                        <div class="notification-time">
+                          6 minutes ago
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <div class="notification-content">
+                      <div class="icon">
+                        <i class="fas fa-check text-success "></i>
+                      </div>
+                      <div class="content">
+                        <div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. In totam explicabo</div>
+                        <div class="notification-time">
+                          6 minutes ago
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <div class="notification-content">
+                      <div class="icon">
+                        <i class="fas fa-check text-success "></i>
+                      </div>
+                      <div class="content">
+                        <div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. In totam explicabo</div>
+                        <div class="notification-time">
+                          6 minutes ago
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <div class="notification-content">
+                      <div class="icon">
+                        <i class="fas fa-check text-success "></i>
+                      </div>
+                      <div class="content">
+                        <div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. In totam explicabo</div>
+                        <div class="notification-time">
+                          6 minutes ago
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a class="dropdown-item" href="#">Show all notifications</a>
+                </div>
+
+              </div>
+              <div class="dropdown-user d-inline-block">
+                <div class="btn-group">
+                  <div ngbDropdown class="d-inline-block">
+                    <a role="button" class=" dropdown-toggle" id="dropdownBasic1" ngbDropdownToggle
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img class="img-responsive img-rounded" src="../assets/user-avatar.jpg" alt="User picture">
+                    </a>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                      <button ngbDropdownItem>Action - 1</button>
+                      <button ngbDropdownItem>Another Action</button>
+                      <button ngbDropdownItem>Something else is here</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div> -->
+        <!-- header == end -->
+
+        <!-- main content == start -->
+        <div id="dk_content" class="content d-flex flex-column flex-column-fluid">
+          <div class="main-content d-flex flex-column-fluid">
+            <!-- <div class="container-fluid"> -->
+            <div class="p-0" style="
+						max-width: 900px;
+						margin: 0 auto;
+				">
+
+              <!-- ======================================== entry-content ======================================== start -->
+              <router-outlet>
               </router-outlet>
-							<!-- ======================================== entry-content ======================================== end -->
-						</div>
-					</div>
-				</div>
-				<!-- main content == end -->
-			</div>
-			<!-- content wrapper (right) -->
-		</div>
-	</div>
+              <!-- ======================================== entry-content ======================================== end -->
+            </div>
+            <!-- <div class="pt-3">
+              <ul class="mt-3">
+                <dk-sidebar-right-nav *ngFor="let sidebaritem of sidebarItems" [SideBaritem]="sidebaritem">
+                </dk-sidebar-right-nav>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+        <!-- main content == end -->
+      </div>
+      <!-- content wrapper (right) -->
+    </div>
+  </div>
 </body>

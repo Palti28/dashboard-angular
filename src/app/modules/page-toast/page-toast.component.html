@@ -1,0 +1,90 @@
+<div class="container-fluid pt-3">
+  <div class="d-flex flex-column">
+    <div class="card w-100">
+      <div class="card-body ">
+        <h1>Toast</h1>
+        <p>
+          Alerts are messages that communicate information to the user. display brief, temporary notifications. They are
+          noticeable but do not disrupt the user experience and do not require an action to be taken. Content can inclue
+          information, warning, error message.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <div class="mt-5">
+          <ul ngbNav #nav="ngbNav" class="nav-pills">
+            <li ngbNavItem>
+              <a ngbNavLink>First</a>
+              <ng-template ngbNavContent>
+                <dk-table></dk-table>
+              </ng-template>
+            </li>
+            <li ngbNavItem>
+              <a ngbNavLink>Second</a>
+              <ng-template ngbNavContent>
+                <p>
+                  second are messages that communicate information to the user. display brief, temporary notifications. They are
+                  noticeable but do not disrupt the user experience and do not require an action to be taken. Content can inclue
+                  information, warning, error message.
+                </p>
+
+              </ng-template>
+            </li>
+          </ul>
+          <div [ngbNavOutlet]="nav"></div>
+        </div>
+        </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <!-- dk-alert -->
+        <button class="btn btn-success" (click)="showSuccess('sukses nih gan')" ngbTooltip="Will disappear in 10s">Success toast</button> <br>
+        <button class="btn btn-danger" (click)="showDanger()" ngbTooltip="Will disappear in 10s">Error toast</button>
+
+        <dk-toast aria-live="polite" aria-atomic="true"></dk-toast>
+        
+
+
+      
+        
+
+
+        <div class="mt-5">
+        <ngb-tabset [destroyOnHide]="false" >
+          <ngb-tab title="toast.service">
+            <ng-template ngbTabContent class="p-2">
+              <pre><code [highlight]="CodetoastService"></code></pre>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab title="toast.component.ts">
+            <ng-template ngbTabContent class="p-2">
+              <pre><code [highlight]="Codetoastcomponentts"></code></pre>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab title="toast.component.html" >
+            <ng-template ngbTabContent>
+              <pre><code [highlight]="Codetoasthtmlcomponent"></code></pre>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab title="toast-global.component.html" >
+            <ng-template ngbTabContent>
+              <p>penggunaan toast</p>
+              <pre><code [highlight]="CodetoastGlobalcomponent"></code></pre>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab title="toast-global.component.ts" >
+            <ng-template ngbTabContent>
+              <p>penggunaan toast</p>
+              <pre><code [highlight]="CodetoastGlobalcomponentTS"></code></pre>
+            </ng-template>
+          </ngb-tab>
+        </ngb-tabset>
+        
+      </div>
+      </div>
+    </div>
+  </div>
+</div>

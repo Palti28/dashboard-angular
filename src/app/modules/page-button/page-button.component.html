@@ -1,0 +1,113 @@
+<div class="container-fluid pt-3">
+  <div class="d-flex flex-column">
+
+    <div class="card w-100">
+      <div class="card-body ">
+        <h1>Button</h1>
+        <p class="lead">
+          DOKU UI Framework button styles for actions in forms, dialogs, and more with support for multiple sizes,
+          states, and more.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body ">
+        <div class="d-flex justify-content-between mb-4">
+          <h4>Button Default</h4>
+          <button type="button" class="btn btn-default btn-sm show-code-btn borderless" (click)="showCodeOne = !showCodeOne">
+            <i class="fas fa-code"></i>
+            Code
+          </button>
+        </div>
+        <p>These following buttons are default style if set .btn-default and you can use for any HTML tags like
+          <code>button; link; a</code> </p>
+        <div class="text-center example">
+          <a href="#" class="btn btn-default "> LINK </a>
+          <button type="button" class="btn btn-default" disabled> DISABLED </button>
+          <button type="button" class="btn btn-default"> BUTTON </button>
+          <input type="button" class="btn btn-default " value="INPUT">
+          <input type="submit" class="btn btn-default" value="SUBMIT">
+        </div>
+        <div class="mt-4" *ngIf="showCodeOne">
+          <ngb-tabset [destroyOnHide]="false">
+            <ngb-tab title="html">
+              <ng-template ngbTabContent class="p-2">
+                <pre><code [highlight]="CodeOne"></code></pre>
+              </ng-template>
+            </ngb-tab>
+          </ngb-tabset>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body ">
+        <div class="d-flex justify-content-between mb-4">
+          <h4>Button Color Variant</h4>
+          <button type="button" class="btn btn-default btn-sm show-code-btn borderless" (click)="showCodeTwo = !showCodeTwo">
+            <i class="fas fa-code"></i>
+            Code
+          </button>
+        </div>
+        <p>DOKU UI Framework's several predefined button styles, each serving its own semantic purpose, with a few
+          extras thrown in for more control.</p>
+        <div class="text-center example">
+          <button type="button" class="btn btn-secondary"> SECONDARY </button>
+          <button type="button" class="btn btn-success"> SUCCESS </button>
+          <button type="button" class="btn btn-info"> INFO </button>
+          <button type="button" class="btn btn-warning"> WARNING </button>
+          <button type="button" class="btn btn-danger"> DANGER </button>
+        </div>
+        <div class="mt-4" *ngIf="showCodeTwo">
+          <ngb-tabset [destroyOnHide]="false">
+            <ngb-tab title="html">
+              <ng-template ngbTabContent class="p-2">
+                <pre><code [highlight]="CodeTwo"></code></pre>
+              </ng-template>
+            </ngb-tab>
+          </ngb-tabset>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-body ">
+        <div class="d-flex justify-content-between mb-4">
+          <h4>Button Icon + Text</h4>
+          <button type="button" class="btn btn-default btn-sm show-code-btn borderless"
+            (click)="showCodeBtnIconText = !showCodeBtnIconText">
+            <i class="fas fa-code"></i>
+            Code
+          </button>
+        </div>
+        <p>DOKU UI Framework's several predefined button styles, each serving its own semantic purpose, with a few
+          extras thrown in for more control.</p>
+        <div class="text-center example">
+          <button class="btn btn-default btn-icon borderless">
+            <i class="far fa-bell"></i>
+          </button>
+          <button class="btn btn-default btn-icon borderless">
+            <i class="fas fa-question"></i>
+          </button>
+          <button type="button" class="btn btn-default">
+            <i class="fa fa-download in-icon"></i> DOWNLOAD
+          </button>
+          <button type="button" class="btn btn-primary">
+            <i class="fa fa-save in-icon"></i> SAVE
+          </button>
+        </div>
+        <div class="mt-4" *ngIf="showCodeBtnIconText">
+          <ngb-tabset [destroyOnHide]="false">
+            <ngb-tab title="html">
+              <ng-template ngbTabContent class="p-2">
+                <pre><code [highlight]="CodeBtnIconText"></code></pre>
+              </ng-template>
+            </ngb-tab>
+          </ngb-tabset>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

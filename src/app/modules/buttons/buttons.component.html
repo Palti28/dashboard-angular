@@ -3,16 +3,6 @@
 <div class="container-fluid pt-3">
   <div class="d-flex flex-column">
 
-    <div class="card">
-      <div class="card-body">
-        <h1>Buttons</h1>
-        <p>
-          Buttons allow users to perform an action or to navigate to another page. They have multiple styles for various
-          needs, and are ideal for calling attention to where a user needs to do something in order to move forward in a
-          flow.
-        </p>
-      </div>
-    </div>
     <div class="card w-100">
       <div class="card-body ">
         <button type="button" class="btn btn-secondary"> SECONDARY </button>
@@ -24,7 +14,7 @@
       </div>
     </div>
 
-    <div class="card w-100">
+    <div class="card w-100" id="alert">
       <div class="card-body ">
         <span>Alert</span>
         <div>
@@ -70,29 +60,30 @@
             </div>
           </div>
         </div>
-        
-        
+
+
         <br>
         <br>ngb component
         <!-- ngb alert -->
         <p>
-          <ngb-alert [dismissible]="false" >
+          <ngb-alert [dismissible]="false">
             <strong>Warning!</strong> Better check yourself, you're not looking too good.
           </ngb-alert>
         </p>
         <br>
         call custom component <br>
         <!-- dk-alert -->
-        <button class="btn btn-success" (click)="showSuccess('sukses nih gan')" ngbTooltip="Will disappear in 10s">Success toast</button>
+        <button class="btn btn-success" (click)="showSuccess('sukses nih gan')"
+          ngbTooltip="Will disappear in 10s">Success toast</button>
         <button class="btn btn-danger" (click)="showDanger()" ngbTooltip="Will disappear in 10s">Error toast</button>
 
         <dk-toast aria-live="polite" aria-atomic="true"></dk-toast>
       </div> <br>
-     
+
 
     </div>
 
-    <div class="card w-100">
+    <div class="card w-100" id="toast">
       <div class="card-body ">
         <span>Toast</span>
         tweak ngb component css
@@ -100,8 +91,8 @@
           Toast example
         </button>
 
-        <ngb-toast class="alert alert-success top-right" *ngIf="showToast" [delay]="3000"
-        [autohide]="autohide" (hide)="showToast = false; autohide = true">
+        <ngb-toast class="alert alert-success top-right" *ngIf="showToast" [delay]="3000" [autohide]="autohide"
+          (hide)="showToast = false; autohide = true">
           <div>
             <i class="fas fa-check-circle in-icon"></i>
           </div>
@@ -117,7 +108,7 @@
       </div>
     </div>
 
-    <div class="card w-100">
+    <div class="card w-100" id="pop-over">
       <div class="card-body ">
         <span>Pop Over</span>
         <button type="button" class="btn btn-outline-secondary mr-2" placement="top"
@@ -361,54 +352,28 @@
       </div>
     </div>
 
-  </div>
+    <div class="card w-100">
+      <div class="card-body">
+        <p class="card-text">
+          Most common case is showing data from backend
+          API and with ng-select this is extremely simple since you can bind directly to
+          observable when using angular <b> | async</b> pipe
+        </p>
 
+        <ng-select class="dk-select" [items]="people" bindLabel="name" bindValue="id" [(ngModel)]="selectedPersonId">
+        </ng-select>
 
-  <div class="row ">
+        <hr>
+        <p>
+          While array of objects is the most common items source, you may want to set simple array of strings, numbers,
+          booleans
+        </p>
 
-  </div>
-
-  <div class="row ">
-
-  </div>
-
-  <div class="row ">
-
-  </div>
-
-  <div class="row ">
-
-  </div>
-
-  <div class="row ">
-
-  </div>
-  <div class="row ">
-
-  </div>
-  <div class="row ">
-
-  </div>
-  <div class="row ">
-
-  </div>
-  <div class="row ">
+        <ng-select [items]="simpleItems" [(ngModel)]="selectedSimpleItem">
+        </ng-select>
+      </div>
+    </div>
 
   </div>
 
-  <div class="row ">
-
-  </div>
-
-  <div class="row ">
-
-  </div>
-
-  <div class="row">
-
-  </div>
-
-  <div class="row">
-
-  </div>
 </div>
