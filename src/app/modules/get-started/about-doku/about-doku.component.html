@@ -22,3 +22,12 @@
     </div>
   </div>
 </div>
+
+<div class="card p-3">
+  <button class="btn btn-success" (click)="showSuccess('sukses nih gan')" ngbTooltip="Will disappear in 10s">Success toast</button> <br>
+  <button class="btn btn-danger" (click)="showDanger()" ngbTooltip="Will disappear in 10s">Error toast</button>
+  
+
+</div> 
+
+<dk-toast aria-live="polite" aria-atomic="true"></dk-toast>

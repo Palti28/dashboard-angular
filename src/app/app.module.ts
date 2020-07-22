@@ -1,7 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-// import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +30,21 @@ import { IframeComponent } from './modules/sample-pages/iframe/iframe.component'
 import { AlertComponent } from './shared/components/alert/alert.component';
 import { ToastComponent } from './shared/components/toast/toast.component';
 import { ToastService } from './shared/services/toast.service';
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+import { PageToastComponent } from './modules/page-toast/page-toast.component';
+import { PageButtonComponent } from './modules/page-button/page-button.component';
+import { SidebarRightNavComponent} from './layout/sidebar-right-nav/sidebar-right-nav.component'
+import { SidebarRightService } from './layout/sidebar-right-nav/sidebar-right.service';
+import { PageTableComponent } from './modules/page-table/page-table.component';
+
+export function getHighlightLanguages() {
+  return {
+    typescript: () => import('highlight.js/lib/languages/typescript'),
+    css: () => import('highlight.js/lib/languages/css'),
+    xml: () => import('highlight.js/lib/languages/xml'),
+    
+  };
+}
 
 @NgModule({
   declarations: [
@@ -49,15 +67,32 @@ import { ToastService } from './shared/services/toast.service';
     TableComponent,
     IframeComponent,
     AlertComponent,
-    ToastComponent
+    ToastComponent,
+    PageToastComponent,
+    PageButtonComponent,  
+    SidebarRightNavComponent, PageTableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     NgbModule,
+    HighlightModule,
+    NgSelectModule, 
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [NavService],
+  providers: [
+    NavService, 
+    ToastService,
+    SidebarRightService,
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue:{
+        languages: getHighlightLanguages()
+      }
+    }
+  ],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

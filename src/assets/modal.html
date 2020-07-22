@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description"
+		content="DOKU UI Framework to comply developers need about standardized UI Components for the IT's products">
+
+	<title>UI/UX Team - DOKU UI Framework</title>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/png" href="../../img/favicon.png" />
+
+	<!-- Bootstrap -->
+	<!-- <link rel="stylesheet" href="../../../dist/css/bootstrap.css"> -->
+
+	<!-- Custom Styling -->
+	<link rel="stylesheet" href="../../stylesheet/css/main.css">
+
+	<link rel="stylesheet" href="https://cdn-dev.oss-ap-southeast-5.aliyuncs.com/doku-ui-framework/doku/stylesheet/css/main.css">
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+	<nav class="sidebar-wrapper-fixed sidebar-fixed-red">
+		<div class="sidebar-content">
+			<!-- sidebar-brand  -->
+			<div class="sidebar-item sidebar-brand">
+				<div class="company">
+					<img class="p-0" src="../../img/doku-logo.svg" alt="">
+				</div>
+				<div style="padding: 17px;">
+					<div id="toggle-sidebar">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pin-toggle-btn" style="position: fixed; bottom: 0;">
+			<button id="pin-sidebar">
+				<i class="fa fa-thumbtack"></i>
+			</button>
+		</div>
+
+	</nav>
+
+	<div class="page-wrapper light-theme sidebar-bg toggled">
+
+		<nav id="sidebar" class="sidebar-wrapper" style="margin-left: 60px;">
+			<div class="sidebar-content">
+				<div class="sticky-top" style="background-color: #FFFFFF;">
+
+					<!-- sidebar-brand  -->
+					<div class="sidebar-item sidebar-brand">
+						<a href="#">DOKU Framework</a>
+					</div>
+					<!-- sidebar-header  -->
+					<div class="sidebar-item sidebar-header d-flex flex-nowrap">
+						<div class="user-pic">
+							<img class="img-responsive img-rounded" src="../../img/user.jpg" alt="User picture">
+						</div>
+						<div class="user-info">
+							<span class="user-name">Jhon
+								<strong>Smith</strong>
+							</span>
+							<span class="user-role">Administrator</span>
+							<span class="user-status">
+								<!-- <i class="fa fa-circle"></i> -->
+								<!-- <span>Online</span> -->
+								<span>Store ID: 1234567890</span>
+							</span>
+						</div>
+					</div>
+					<!-- sidebar-search  -->
+					<div class="sidebar-item sidebar-search">
+						<div>
+							<div class="input-group">
+								<input type="text" class="form-control search-menu" placeholder="Search...">
+								<div class="input-group-append">
+									<span class="input-group-text">
+										<i class="fa fa-search" aria-hidden="true"></i>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- sidebar-menu  -->
+				<div class=" sidebar-item sidebar-menu">
+					<ul>
+						<li class="header-menu">
+							<span>General</span>
+						</li>
+						<li>
+							<a href="../../../index.html">
+								<i class="fa fa-home"></i>
+								<span class="menu-text">Dashboard</span>
+							</a>
+						</li>
+						<li class="sidebar-dropdown">
+							<a href="#">
+								<i class="fa fa-copyright"></i>
+								<span class="menu-text">Foundation</span>
+							</a>
+							<div class="sidebar-submenu">
+								<ul>
+									<li>
+										<a href="../foundations/typography.html">Typography</a>
+									</li>
+									<li>
+										<a href="../foundations/brand-color.html">Color</a>
+									</li>
+									<li>
+										<a href="../foundations/icon.html">Icon</a>
+									</li>
+									<li>
+										<a href="../foundations/illustration.html">Illustration</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="sidebar-dropdown active">
+							<a href="#">
+								<i class="far fa-gem"></i>
+								<span class="menu-text">Components</span>
+							</a>
+							<div class="sidebar-submenu" style="display: block;">
+								<ul>
+									<li>
+										<a href="alert.html">Alert</a>
+									</li>
+									<li>
+										<a href="button.html">Button</a>
+									</li>
+									<li>
+										<a href="chart.html">Charts</a>
+									</li>
+									<li>
+										<a href="datepicker.html">Datepicker</a>
+									</li>
+									<li>
+										<a href="table.html">Table</a>
+									</li>
+									<li>
+										<a href="checkradio.html">Checkbox & Radio</a>
+									</li>
+									<li class="active">
+										<a href="modal.html">Modal</a>
+									</li>
+									<li>
+										<a href="selectbox.html">Select Box</a>
+									</li>
+									<li>
+										<a href="form.html">Form</a>
+									</li>
+									<li>
+										<a href="badges.html">Badge</a>
+									</li>
+									<li>
+										<a href="card.html">Card</a>
+									</li>
+									<li>
+										<a href="dropdowns.html">Dropdown</a>
+									</li>
+									<li>
+										<a href="pagination.html">Pagination</a>
+									</li>
+									<li>
+										<a href="loader.html">Loader</a>
+									</li>
+									<li>
+										<a href="timeline.html">Timeline</a>
+									</li>
+									<li>
+										<a href="collapse.html">Collapse</a>
+									</li>
+									<li>
+										<a href="tooltip.html">Tooltip</a>
+									</li>
+									<li>
+										<a href="popover.html">Popover</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="sidebar-dropdown">
+							<a href="#">
+								<i class="fa fa-globe"></i>
+								<span class="menu-text">Maps</span>
+							</a>
+							<div class="sidebar-submenu">
+								<ul>
+									<li>
+										<a href="#">Google maps</a>
+									</li>
+									<li>
+										<a href="#">Open street map</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="header-menu">
+							<span>Extra</span>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-book"></i>
+								<span class="menu-text">Docs</span>
+								<span class="badge badge-pill badge-primary">Read Me</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-calendar"></i>
+								<span class="menu-text">Calendar</span>
+							</a>
+						</li>
+						<li class="sidebar-dropdown">
+							<a href="#">
+								<i class="fa fa-folder"></i>
+								<span class="menu-text">Example Page</span>
+							</a>
+							<div class="sidebar-submenu">
+								<ul>
+									<li>
+										<a href="../examples/login.html">Login</a>
+									</li>
+									<li>
+										<a href="../examples/register.html">Registration</a>
+									</li>
+									<li>
+										<a href="#">Card Collection</a>
+									</li>
+									<li>
+										<a href="../examples/merchant-img.html">Merchant - Bank Images</a>
+									</li>
+									<li>
+										<a href="../examples/email-template.html" target="_blank">Email Template</a>
+									</li>
+									<li>
+										<a href="../examples/new-dashboard.html" target="_blank">New Dashboard</a>
+									</li>
+									<li>
+										<a href="../examples/401.html" target="_blank">401 - Unauthorized</a>
+									</li>
+									<li>
+										<a href="../examples/404.html" target="_blank">404 - Not Found</a>
+									</li>
+									<li>
+										<a href="../examples/500.html" target="_blank">500 - Internal Server Error</a>
+									</li>
+									<li>
+										<a href="../examples/dwcore/login.html" target="_blank">DW Payment Page</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- sidebar-menu  -->
+			</div>
+			<!-- sidebar-footer  -->
+			<div class="sidebar-footer">
+				<div class="dropdown">
+					<a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="fa fa-bell"></i>
+						<span class="badge badge-pill badge-primary notification">3</span>
+					</a>
+					<div class="dropdown-menu notifications" aria-labelledby="dropdownMenuMessage">
+						<div class="notifications-header">
+							<i class="fa fa-bell"></i>
+							Notifications
+						</div>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">
+							<div class="notification-content">
+								<div class="icon">
+									<i class="fas fa-check text-success border border-success"></i>
+								</div>
+								<div class="content">
+									<div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+										elit. In totam explicabo</div>
+									<div class="notification-time">
+										6 minutes ago
+									</div>
+								</div>
+							</div>
+						</a>
+						<a class="dropdown-item" href="#">
+							<div class="notification-content">
+								<div class="icon">
+									<i class="fas fa-exclamation text-info border border-info"></i>
+								</div>
+								<div class="content">
+									<div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+										elit. In totam explicabo</div>
+									<div class="notification-time">
+										Today
+									</div>
+								</div>
+							</div>
+						</a>
+						<a class="dropdown-item" href="#">
+							<div class="notification-content">
+								<div class="icon">
+									<i class="fas fa-exclamation-triangle text-warning border border-warning"></i>
+								</div>
+								<div class="content">
+									<div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+										elit. In totam explicabo</div>
+									<div class="notification-time">
+										Yesterday
+									</div>
+								</div>
+							</div>
+						</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item text-center" href="#">View all notifications</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="fa fa-envelope"></i>
+						<span class="badge badge-pill badge-primary notification">7</span>
+					</a>
+					<div class="dropdown-menu messages" aria-labelledby="dropdownMenuMessage">
+						<div class="messages-header">
+							<i class="fa fa-envelope"></i>
+							Messages
+						</div>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">
+							<div class="message-content">
+								<div class="pic">
+									<img src="../../img/user.jpg" alt="">
+								</div>
+								<div class="content">
+									<div class="message-title">
+										<strong> Jhon doe</strong>
+									</div>
+									<div class="message-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+										elit. In totam explicabo</div>
+								</div>
+							</div>
+
+						</a>
+						<a class="dropdown-item" href="#">
+							<div class="message-content">
+								<div class="pic">
+									<img src="../../img/user.jpg" alt="">
+								</div>
+								<div class="content">
+									<div class="message-title">
+										<strong> Jhon doe</strong>
+									</div>
+									<div class="message-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+										elit. In totam explicabo</div>
+								</div>
+							</div>
+
+						</a>
+						<a class="dropdown-item" href="#">
+							<div class="message-content">
+								<div class="pic">
+									<img src="../../img/user.jpg" alt="">
+								</div>
+								<div class="content">
+									<div class="message-title">
+										<strong> Jhon doe</strong>
+									</div>
+									<div class="message-detail">Lorem ipsum dolor sit amet consectetur adipisicing
+										elit. In totam explicabo</div>
+								</div>
+							</div>
+						</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item text-center" href="#">View all messages</a>
+
+					</div>
+				</div>
+				<div class="dropdown">
+					<a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="fa fa-cog"></i>
+						<span class="badge-sonar"></span>
+					</a>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuMessage">
+						<a class="dropdown-item" href="#">My profile</a>
+						<a class="dropdown-item" href="#">Help</a>
+						<a class="dropdown-item" href="#">Setting</a>
+					</div>
+				</div>
+				<div>
+					<a href="#">
+						<i class="fa fa-power-off"></i>
+					</a>
+				</div>
+				<div class="pinned-footer">
+					<a href="#">
+						<i class="fas fa-ellipsis-h"></i>
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- page-content  -->
+		<main class="page-content pt-2">
+			<div id="overlay" class="overlay"></div>
+			<div class="container-fluid p-3 mt-3">
+
+				<div class="row">
+					<div class="form-group col-md-12 page-header">
+						<h3>Overlay Modal</h3>
+						<p>Overlay modal, add dialogs to your site for lightboxes, user notifications, or completely
+							custom content</p>
+					</div>
+				</div>
+
+				<!-- Modal size variants -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-12 stretch-card grid-margin">
+								<div class="card">
+									<div class="card-body">
+										<div class="clearfix">
+											<h4 class="card-title float-left">Modal Size variants</h4>
+											<p class="card-description">
+												Modals have three optional sizes, available via modifier classes to be
+												placed on a .modal-dialog. These sizes kick in at certain breakpoints to
+												avoid horizontal scrollbars on narrower viewports.
+											</p>
+										</div>
+										<div class="component-container">
+											<!-- Button default modal -->
+											<button type="button" class="btn btn-primary" data-toggle="modal"
+												data-target="#exampleModalDefault">
+												Default Modal
+											</button>
+
+											<!-- Button large modal -->
+											<button type="button" class="btn btn-primary" data-toggle="modal"
+												data-target="#exampleModalLarge">
+												Large Modal
+											</button>
+
+											<!-- Button x-large modal -->
+											<button type="button" class="btn btn-primary" data-toggle="modal"
+												data-target="#exampleModalExtra">
+												Extra Large Modal
+											</button>
+										</div>
+										<!-- Code Snippet -->
+										<div class="code-snippet">
+											<div data-toggle="collapse" href="#collapseModalSize" aria-expanded="false" aria-controls="collapseCode">
+												<button class="btn btn-default btn-icon borderless" data-toggle="tooltip" data-placement="top" title="Show code">
+													<i class="fas fa-code"></i>
+												</button>
+											</div>
+											<div>
+												<button onclick="copyToClipboard('#copyModalSize', this)" onmouseout="outFunc(this)" class="btn btn-default btn-icon borderless"
+												 data-toggle="tooltip" data-placement="top" title="Copy code">
+													<i class="far fa-copy"></i>
+												</button>
+											</div>
+										</div>
+										<div class="collapse" id="collapseModalSize">
+											<div class="post-body">
+												<pre><code id="copyModalSize">
+&lt;!-- Button default modal --&gt;
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalDefault"&gt;
+	Default Modal
+&lt;/button&gt;<br>
+&lt;!-- Default Modal --&gt;
+&lt;div class="modal fade" id="exampleModalDefault" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+	&lt;div class="modal-dialog" role="document"&gt;
+		&lt;div class="modal-content"&gt;
+			&lt;div class="modal-header"&gt;
+				&lt;h5 class="modal-title" id="exampleModalLabel"&gt;Default Modal Example&lt;/h5&gt;
+				&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+					&lt;span aria-hidden="true"&gt;&lt;i class="fa fa-times"&gt;&lt;/i&gt;&lt;/span&gt;
+				&lt;/button&gt;
+			&lt;/div&gt;
+			&lt;div class="modal-body"&gt;
+				&lt;p&gt; Here you can see that, this is a default modal size example &lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class="modal-footer"&gt;
+				&lt;button type="button" class="btn btn-link" data-dismiss="modal"&gt;Cancel&lt;/button&gt;
+				&lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;<br>
+&lt;!-- Button large modal --&gt;
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLarge"&gt;
+	Large Modal
+&lt;/button&gt;<br>
+&lt;!-- Large Modal --&gt;
+&lt;div class="modal fade" id="exampleModalLarge" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+	&lt;div class="modal-dialog modal-lg" role="document"&gt;
+		&lt;div class="modal-content"&gt;
+			&lt;div class="modal-header"&gt;
+				&lt;h5 class="modal-title" id="exampleModalLabel"&gt;Large Modal Example&lt;/h5&gt;
+				&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+					&lt;span aria-hidden="true"&gt;&lt;i class="fa fa-times"&gt;&lt;/i&gt;&lt;/span&gt;
+				&lt;/button&gt;
+			&lt;/div&gt;
+			&lt;div class="modal-body"&gt;
+				&lt;p&gt; Here you can see that, this is a large modal size example &lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class="modal-footer"&gt;
+				&lt;button type="button" class="btn btn-link" data-dismiss="modal"&gt;Cancel&lt;/button&gt;
+				&lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;<br>
+&lt;!-- Button x-large modal --&gt;
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalExtra"&gt;
+	Extra Large Modal
+&lt;/button&gt;<br>
+&lt;!-- Extra Large Modal --&gt;
+&lt;div class="modal fade" id="exampleModalExtra" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+	&lt;div class="modal-dialog modal-xl" role="document"&gt;
+		&lt;div class="modal-content"&gt;
+			&lt;div class="modal-header"&gt;
+				&lt;h5 class="modal-title" id="exampleModalLabel"&gt;Extra Large Modal Example&lt;/h5&gt;
+				&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+					&lt;span aria-hidden="true"&gt;&lt;i class="fa fa-times"&gt;&lt;/i&gt;&lt;/span&gt;
+				&lt;/button&gt;
+			&lt;/div&gt;
+			&lt;div class="modal-body"&gt;
+				&lt;p&gt; Here you can see that, this is an extra-large modal size example &lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class="modal-footer"&gt;
+				&lt;button type="button" class="btn btn-link" data-dismiss="modal"&gt;Cancel&lt;/button&gt;
+				&lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+												</code></pre>
+											</div>
+										</div>
+
+										<!-- Default Modal -->
+										<div class="modal fade" id="exampleModalDefault" tabindex="-1" role="dialog"
+											aria-labelledby="exampleModalLabel" aria-hidden="true">
+											<div class="modal-dialog" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="exampleModalLabel">Default Modal
+															Example</h5>
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															<span aria-hidden="true"><i class="fa fa-times"></i></span>
+														</button>
+													</div>
+													<div class="modal-body">
+														<p>
+															Here you can see that, this is a default modal size example
+														</p>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+														<button type="button" class="btn btn-primary">Save
+															changes</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- Large Modal -->
+										<div class="modal fade" id="exampleModalLarge" tabindex="-1" role="dialog"
+											aria-labelledby="exampleModalLabel" aria-hidden="true">
+											<div class="modal-dialog modal-lg" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="exampleModalLabel">Large Modal
+															Example</h5>
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															<span aria-hidden="true"><i class="fa fa-times"></i></span>
+														</button>
+													</div>
+													<div class="modal-body">
+														<p>
+															Here you can see that, this is a large modal size example
+														</p>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+														<button type="button" class="btn btn-primary">Save
+															changes</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- Extra Large Modal -->
+										<div class="modal fade" id="exampleModalExtra" tabindex="-1" role="dialog"
+											aria-labelledby="exampleModalLabel" aria-hidden="true">
+											<div class="modal-dialog modal-xl" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="exampleModalLabel">Extra Large Modal
+															Example</h5>
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															<span aria-hidden="true"><i class="fa fa-times"></i></span>
+														</button>
+													</div>
+													<div class="modal-body">
+														<p>
+															Here you can see that, this is an extra-large modal size
+															example
+														</p>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+														<button type="button" class="btn btn-primary">Save
+															changes</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Vertically centered modal -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-12 stretch-card grid-margin">
+								<div class="card">
+									<div class="card-body">
+										<div class="clearfix">
+											<h4 class="card-title float-left">Vertically Centered Modal</h4>
+											<p class="card-description">
+												Add .modal-dialog-centered to .modal-dialog to vertically center the
+												modal.
+											</p>
+										</div>
+										<div class="component-container">
+											<!-- Button trigger modal -->
+											<button type="button" class="btn btn-primary" data-toggle="modal"
+												data-target="#exampleModalCenter">
+												Hi, click me
+											</button>
+										</div>
+										<!-- Code Snippet -->
+										<div class="code-snippet">
+											<div data-toggle="collapse" href="#collapseCenterredModal" aria-expanded="false" aria-controls="collapseCode">
+												<button class="btn btn-default btn-icon borderless" data-toggle="tooltip" data-placement="top" title="Show code">
+													<i class="fas fa-code"></i>
+												</button>
+											</div>
+											<div>
+												<button onclick="copyToClipboard('#copyCenterredModal', this)" onmouseout="outFunc(this)" class="btn btn-default btn-icon borderless"
+												 data-toggle="tooltip" data-placement="top" title="Copy code">
+													<i class="far fa-copy"></i>
+												</button>
+											</div>
+										</div>
+										<div class="collapse" id="collapseCenterredModal">
+											<div class="post-body">
+												<pre><code id="copyCenterredModal">
+&lt;!-- Button trigger modal --&gt;
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"&gt;
+	Hi, click me
+&lt;/button&gt;<br>
+&lt;!-- Modal --&gt;
+&lt;div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"&gt;
+	&lt;div class="modal-dialog modal-dialog-centered" role="document"&gt;
+		&lt;div class="modal-content"&gt;
+			&lt;div class="modal-header"&gt;
+				&lt;h5 class="modal-title" id="exampleModalCenterTitle"&gt;Vertically centered modal&lt;/h5&gt;
+				&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+					&lt;span aria-hidden="true"&gt;&lt;i class="fa fa-times"&gt;&lt;/i&gt;&lt;/span&gt;
+				&lt;/button&gt;
+			&lt;/div&gt;
+			&lt;div class="modal-body"&gt;
+				&lt;p&gt; Toggle a working modal demo by clicking the button below. It will slide down and fade in from the top of the page. &lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class="modal-footer"&gt;
+				&lt;button type="button" class="btn btn-link" data-dismiss="modal"&gt;Cancel&lt;/button&gt;
+				&lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+												</code></pre>
+											</div>
+										</div>
+
+										<!-- Modal -->
+										<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+											aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+											<div class="modal-dialog modal-dialog-centered" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="exampleModalCenterTitle">Vertically
+															centered modal</h5>
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															<span aria-hidden="true"><i class="fa fa-times"></i></span>
+														</button>
+													</div>
+													<div class="modal-body">
+														<p>
+															Toggle a working modal demo by clicking the button below. It
+															will slide down and fade in from the top of the page.
+														</p>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+														<button type="button" class="btn btn-primary">Save
+															changes</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal with form -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-12 stretch-card grid-margin">
+								<div class="card">
+									<div class="card-body">
+										<div class="clearfix">
+											<h4 class="card-title float-left">Modal with form</h4>
+											<p class="card-description">
+												Input your data with form in overlay modal.
+											</p>
+										</div>
+										<div class="component-container">
+											<!-- Button trigger modal -->
+											<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleFormModal">
+												Hi, click me
+											</button>
+										</div>
+										<!-- Code Snippet -->
+										<div class="code-snippet">
+											<div data-toggle="collapse" href="#collapseModalForm" aria-expanded="false" aria-controls="collapseCode">
+												<button class="btn btn-default btn-icon borderless" data-toggle="tooltip" data-placement="top" title="Show code">
+													<i class="fas fa-code"></i>
+												</button>
+											</div>
+											<div>
+												<button onclick="copyToClipboard('#copyModalForm', this)" onmouseout="outFunc(this)" class="btn btn-default btn-icon borderless"
+												 data-toggle="tooltip" data-placement="top" title="Copy code">
+													<i class="far fa-copy"></i>
+												</button>
+											</div>
+										</div>
+										<div class="collapse" id="collapseModalForm">
+											<div class="post-body">
+												<pre><code id="copyModalForm">
+&lt;!-- Button trigger modal --&gt;
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleFormModal"&gt;
+	Hi, click me
+&lt;/button&gt;<br>
+&lt;!-- Modal --&gt;
+&lt;div class="modal fade" id="exampleFormModal" tabindex="-1" role="dialog"
+	aria-labelledby="exampleModalCenterTitle" aria-hidden="true"&gt;
+	&lt;div class="modal-dialog modal-dialog-centered" role="document"&gt;
+		&lt;div class="modal-content"&gt;
+			&lt;div class="modal-header"&gt;
+				&lt;h5 class="modal-title" id="exampleModalCenterTitle"&gt;Modal with
+					form&lt;/h5&gt;
+				&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+					&lt;span aria-hidden="true"&gt;&lt;i class="fa fa-times"&gt;&lt;/i&gt;&lt;/span&gt;
+				&lt;/button&gt;
+			&lt;/div&gt;
+			&lt;div class="modal-body"&gt;
+				&lt;form action=""&gt;
+					&lt;div class="form-group"&gt;
+						&lt;label for="exampleInputEmail1"&gt;Email address&lt;/label&gt;
+						&lt;input type="email" class="form-control" id="exampleInputEmail1"
+							aria-describedby="emailHelp" placeholder="This is text field"&gt;
+					&lt;/div&gt;
+
+					&lt;div class="form-group"&gt;
+						&lt;label for="exampleInputPassword1"&gt;Password&lt;/label&gt;
+						&lt;input type="password" class="form-control" id="exampleInputPassword1"
+							placeholder="Type your password"&gt;
+					&lt;/div&gt;
+					&lt;div class="form-group"&gt;
+						&lt;label for="exampleFormControlSelect1"&gt;Example
+							select&lt;/label&gt;
+						&lt;select class="form-control" id="exampleFormControlSelect1"&gt;
+							&lt;option&gt;1&lt;/option&gt;
+							&lt;option&gt;2&lt;/option&gt;
+							&lt;option&gt;3&lt;/option&gt;
+							&lt;option&gt;4&lt;/option&gt;
+							&lt;option&gt;5&lt;/option&gt;
+						&lt;/select&gt;
+					&lt;/div&gt;
+					&lt;div class="form-group"&gt;
+						&lt;label for="exampleFormControlFile1"&gt;Example file
+							input&lt;/label&gt;
+						&lt;input type="file" class="form-control-file" id="exampleFormControlFile1"&gt;
+					&lt;/div&gt;
+					&lt;div class="form-group"&gt;
+						&lt;label for="exampleTextArea"&gt;Textarea&lt;/label&gt;
+						&lt;textarea class="form-control" name="textareaExample" id="textArea" cols="30"
+							rows="4"&gt;&lt;/textarea&gt;
+					&lt;/div&gt;
+				&lt;/form&gt;
+			&lt;/div&gt;
+			&lt;div class="modal-footer"&gt;
+				&lt;button type="button" class="btn btn-link" data-dismiss="modal"&gt;Cancel&lt;/button&gt;
+				&lt;button type="button" class="btn btn-primary"&gt;Save
+					changes&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+												</code></pre>
+											</div>
+										</div>
+
+										<!-- Modal -->
+										<div class="modal fade" id="exampleFormModal" tabindex="-1" role="dialog"
+											aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+											<div class="modal-dialog modal-dialog-centered" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="exampleModalCenterTitle">Modal with
+															form</h5>
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															<span aria-hidden="true"><i class="fa fa-times"></i></span>
+														</button>
+													</div>
+													<div class="modal-body">
+														<form action="">
+															<div class="form-group">
+																<label for="exampleInputEmail1">Email address</label>
+																<input type="email" class="form-control" id="exampleInputEmail1"
+																	aria-describedby="emailHelp" placeholder="This is text field">
+															</div>
+
+															<div class="form-group">
+																<label for="exampleInputPassword1">Password</label>
+																<input type="password" class="form-control" id="exampleInputPassword1"
+																	placeholder="Type your password">
+															</div>
+															<div class="form-group">
+																<label for="exampleFormControlSelect1">Example
+																	select</label>
+																<select class="form-control" id="exampleFormControlSelect1">
+																	<option>1</option>
+																	<option>2</option>
+																	<option>3</option>
+																	<option>4</option>
+																	<option>5</option>
+																</select>
+															</div>
+															<div class="form-group">
+																<label for="exampleFormControlFile1">Example file
+																	input</label>
+																<input type="file" class="form-control-file" id="exampleFormControlFile1">
+															</div>
+															<div class="form-group">
+																<label for="exampleTextArea">Textarea</label>
+																<textarea class="form-control" name="textareaExample" id="textArea" cols="30"
+																	rows="4"></textarea>
+															</div>
+														</form>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+														<button type="button" class="btn btn-primary">Save
+															changes</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal Events -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-12 stretch-card grid-margin">
+								<div class="card">
+									<div class="card-body">
+										<div class="clearfix">
+											<h4 class="card-title float-left">Modal Events</h4>
+											<p class="card-description">
+												Add .modal-dialog-centered to .modal-dialog to vertically center the
+												modal.
+											</p>
+										</div>
+										<div class="component-container">
+											<!-- Button trigger modal -->
+											<button type="button" class="btn btn-primary" data-toggle="modal"
+												data-target="#eventSuccessModal">
+												Hi, click Success Modal
+											</button>
+
+											<button type="button" class="btn btn-primary" data-toggle="modal"
+												data-target="#eventWarningModal">
+												Hi, click Warning Modal
+											</button>
+
+											<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#eventErrorModal">
+												Hi, click Error Modal
+											</button>
+										</div>
+										<!-- Code Snippet -->
+										<div class="code-snippet">
+											<div data-toggle="collapse" href="#collapseModalEvents" aria-expanded="false" aria-controls="collapseCode">
+												<button class="btn btn-default btn-icon borderless" data-toggle="tooltip" data-placement="top" title="Show code">
+													<i class="fas fa-code"></i>
+												</button>
+											</div>
+											<div>
+												<button onclick="copyToClipboard('#copyModalEvents', this)" onmouseout="outFunc(this)" class="btn btn-default btn-icon borderless"
+												 data-toggle="tooltip" data-placement="top" title="Copy code">
+													<i class="far fa-copy"></i>
+												</button>
+											</div>
+										</div>
+										<div class="collapse" id="collapseModalEvents">
+											<div class="post-body">
+												<pre><code id="copyModalEvents">
+&lt;!-- Button trigger modal --&gt;
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#eventSuccessModal"&gt;
+	Hi, click Success Modal
+&lt;/button&gt;<br>
+&lt;!-- Success Modal --&gt;
+&lt;div class="modal fade" id="eventSuccessModal" tabindex="-1" role="dialog" aria-hidden="false"&gt;
+	&lt;div class="modal-dialog modal-dialog-centered" role="document"&gt;
+		&lt;div class="modal-content"&gt;
+			&lt;div class="success-event"&gt;
+				&lt;img src="../../img/modal-ornament/check.png" alt=""&gt;
+			&lt;/div&gt;
+			&lt;div class="modal-body event-content"&gt;
+				&lt;h5&gt; Way to go! &lt;/h5&gt;
+				&lt;p&gt; Congrats, this is an success messages! &lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class="modal-footer centered-btn"&gt;
+				&lt;button type="button" class="btn btn-primary" data-dismiss="modal"&gt;Close&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;<br>
+&lt;!-- Warning Modal --&gt;
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#eventWarningModal"&gt;
+	Hi, click Warning Modal
+&lt;/button&gt;<br>
+&lt;div class="modal fade" id="eventSuccessModal" tabindex="-1" role="dialog" aria-hidden="false&gt;
+	&lt;div class="modal-dialog modal-dialog-centered" role="document"&gt;
+		&lt;div class="modal-content"&gt;
+			&lt;div class="warning-event"&gt;
+				&lt;img src="../../img/modal-ornament/warning.png" alt=""&gt;
+			&lt;/div&gt;
+			&lt;div class="modal-body event-content"&gt;
+				&lt;h5&gt; Oops...warning! &lt;/h5&gt;
+				&lt;p&gt; Wohoo, this is a warning messages! &lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class="modal-footer centered-btn"&gt;
+				&lt;button type="button" class="btn btn-primary" data-dismiss="modal"&gt;Close&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;<br>
+&lt;!-- Error Modal --&gt;
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#eventErrorModal"&gt;
+	Hi, click Error Modal
+&lt;/button&gt;<br>
+&lt;div class="modal fade" id="eventErrorModal" tabindex="-1" role="dialog" aria-hidden="false"&gt;
+	&lt;div class="modal-dialog modal-dialog-centered" role="document"&gt;
+		&lt;div class="modal-content"&gt;
+			&lt;div class="error-event"&gt;
+				&lt;img src="../../img/modal-ornament/error.png" alt=""&gt;
+			&lt;/div&gt;
+			&lt;div class="modal-body event-content"&gt;
+				&lt;h5&gt; Oh no! &lt;/h5&gt;
+				&lt;p&gt; Whoopsie, this is an error messages! &lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class="modal-footer centered-btn"&gt;
+				&lt;button type="button" class="btn btn-primary" data-dismiss="modal"&gt;I'll Try again&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+												</code></pre>
+											</div>
+										</div>
+
+										<!-- Success Modal -->
+										<div class="modal fade" id="eventSuccessModal" tabindex="-1" role="dialog" aria-hidden="false">
+											<div class="modal-dialog modal-dialog-centered" role="document">
+												<div class="modal-content">
+													<div class="success-event">
+														<img src="../../img/modal-ornament/check.png" alt="">
+													</div>
+													<div class="modal-body event-content">
+														<h5>
+															Way to go!
+														</h5>
+														<p>
+															Congrats, this is an success messages!
+														</p>
+													</div>
+													<div class="modal-footer centered-btn">
+														<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- Warning Modal -->
+										<div class="modal fade" id="eventWarningModal" tabindex="-1" role="dialog" aria-hidden="false">
+											<div class="modal-dialog modal-dialog-centered" role="document">
+												<div class="modal-content">
+													<div class="warning-event">
+														<img src="../../img/modal-ornament/warning.png" alt="">
+													</div>
+													<div class="modal-body event-content">
+														<h5>
+															Oops...warning!
+														</h5>
+														<p>
+															Wohoo, this is a warning messages!
+														</p>
+													</div>
+													<div class="modal-footer centered-btn">
+														<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- Error Modal -->
+										<div class="modal fade" id="eventErrorModal" tabindex="-1" role="dialog" aria-hidden="false">
+											<div class="modal-dialog modal-dialog-centered" role="document">
+												<div class="modal-content">
+													<div class="error-event">
+														<img src="../../img/modal-ornament/error.png" alt="">
+													</div>
+													<div class="modal-body event-content">
+														<h5>
+															Oh no!
+														</h5>
+														<p>
+															Whoopsie, this is an error messages!
+														</p>
+													</div>
+													<div class="modal-footer centered-btn">
+														<button type="button" class="btn btn-primary" data-dismiss="modal">I'll Try again</button>
+
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal with icons -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-12 stretch-card grid-margin">
+								<div class="card">
+									<div class="card-body">
+										<div class="clearfix">
+											<h4 class="card-title float-left">Modal with icons</h4>
+											<p class="card-description">
+												Variation of modal with icon, add .modal-dialog-centered to .modal-dialog to vertically center the
+												modal.
+											</p>
+										</div>
+										<div class="component-container">
+											<!-- Button trigger modal -->
+											<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#successModalIcon">
+												Hi, click Success Modal
+											</button>
+
+											<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#warningModalIcon">
+												Hi, click Warning Modal
+											</button>
+
+											<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#errorModalIcon">
+												Hi, click Error Modal
+											</button>
+										</div>
+
+										<!-- Code Snippet -->
+										<div class="code-snippet">
+											<div data-toggle="collapse" href="#collapseModalIcon" aria-expanded="false" aria-controls="collapseCode">
+												<button class="btn btn-default btn-icon borderless" data-toggle="tooltip" data-placement="top" title="Show code">
+													<i class="fas fa-code"></i>
+												</button>
+											</div>
+											<div>
+												<button onclick="copyToClipboard('#copyModalIcon', this)" onmouseout="outFunc(this)" class="btn btn-default btn-icon borderless"
+												 data-toggle="tooltip" data-placement="top" title="Copy code">
+													<i class="far fa-copy"></i>
+												</button>
+											</div>
+										</div>
+										<div class="collapse" id="collapseModalIcon">
+											<div class="post-body">
+												<pre><code id="copyModalIcon">
+&lt;!-- Button trigger modal --&gt;
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#successModalIcon"&gt;
+	Hi, click Success Modal
+&lt;/button&gt;<br>
+&lt;!-- Modal Event Success --&gt;
+&lt;div class="modal fade" id="successModalIcon" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"&gt;
+	&lt;div class="modal-dialog modal-dialog-centered" role="document"&gt;
+		&lt;div class="modal-content"&gt;
+			&lt;div class="modal-header"&gt;
+				&lt;h5 class="modal-title" id="exampleModalCenterTitle"&gt;
+					&lt;div class="event-icon"&gt;
+						&lt;div&gt; 
+							&lt;img src="../../img/modal-ornament/success-icon.png" alt=""&gt;
+						&lt;/div&gt;
+						&lt;div class="header-content"&gt; 
+							&lt;h4&gt;Modal Success!&lt;/h4&gt; 
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/h5&gt;
+				&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+					&lt;span aria-hidden="true"&gt;&lt;i class="fa fa-times"&gt;&lt;/i&gt;&lt;/span&gt;
+				&lt;/button&gt;
+			&lt;/div&gt;
+			&lt;div class="modal-body event-icon"&gt;
+				&lt;p&gt; Wohoo, way to gooo.. This is modal demo for sucess messages in modal icon success. &lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class="modal-footer event-icon"&gt;
+				&lt;button type="button" class="btn btn-primary" data-dismiss="modal"&gt;Close&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+												</code></pre>
+											</div>
+										</div>
+
+										<!-- Modal Event Success -->
+										<div class="modal fade" id="successModalIcon" tabindex="-1" role="dialog"
+											aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+											<div class="modal-dialog modal-dialog-centered" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="exampleModalCenterTitle">
+															<div class="event-icon">
+																<div>
+																	<img src="../../img/modal-ornament/success-icon.png" alt="">
+																</div>
+																<div class="header-content">
+																	<h4>Modal Success!</h4>
+																</div>
+															</div>
+														</h5>
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															<span aria-hidden="true"><i class="fa fa-times"></i></span>
+														</button>
+													</div>
+													<div class="modal-body event-icon">
+														<p>
+															Wohoo, way to gooo.. This is modal demo for sucess messages in modal icon success.
+														</p>
+													</div>
+													<div class="modal-footer event-icon">
+														<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- Modal Event Warning -->
+										<div class="modal fade" id="warningModalIcon" tabindex="-1" role="dialog"
+											aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+											<div class="modal-dialog modal-dialog-centered" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="exampleModalCenterTitle">
+															<div class="event-icon">
+																<div>
+																	<img src="../../img/modal-ornament/warning-icon.png" alt="">
+																</div>
+																<div class="header-content">
+																	<h4>Modal Warning!</h4>
+																</div>
+															</div>
+
+															</h5>
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															<span aria-hidden="true"><i class="fa fa-times"></i></span>
+														</button>
+													</div>
+													<div class="modal-body event-icon">
+														<p>
+															Wohoo, Oh crappp.. This is modal demo for warning messages in modal icon warning.
+														</p>
+													</div>
+													<div class="modal-footer event-icon">
+														<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<!-- Modal Event Error -->
+										<div class="modal fade" id="errorModalIcon" tabindex="-1" role="dialog"
+											aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+											<div class="modal-dialog modal-dialog-centered" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="exampleModalCenterTitle">
+															<div class="event-icon">
+																<div>
+																	<img src="../../img/modal-ornament/error-icon.png" alt="">
+																</div>
+																<div class="header-content">
+																	<h4>Modal Error!</h4>
+																</div>
+															</div>
+
+															</h5>
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															<span aria-hidden="true"><i class="fa fa-times"></i></span>
+														</button>
+													</div>
+													<div class="modal-body event-icon">
+														<p>
+															Whoopsie, Oh noo!! .. This is modal demo for error messages in modal icon error.
+														</p>
+													</div>
+													<div class="modal-footer event-icon">
+														<button type="button" class="btn btn-primary" data-dismiss="modal">Try Again</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Modal table -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-12 stretch-card grid-margin">
+								<div class="card">
+									<div class="card-body">
+										<div class="clearfix">
+											<h4 class="card-title float-left">Modal with table</h4>
+											<p class="card-description">
+												Display rows of data to helps users view, process and
+												understand data in overlay modal.
+											</p>
+										</div>
+										<div class="component-container">
+											<!-- Button trigger modal -->
+											<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleTableModal">
+												MODAL TABLE
+											</button>
+										</div>
+
+										<!-- Code Snippet -->
+										<div class="code-snippet">
+											<div data-toggle="collapse" href="#collapseModalTable" aria-expanded="false" aria-controls="collapseCode">
+												<button class="btn btn-default btn-icon borderless" data-toggle="tooltip" data-placement="top" title="Show code">
+													<i class="fas fa-code"></i>
+												</button>
+											</div>
+											<div>
+												<button onclick="copyToClipboard('#copyModalTable', this)" onmouseout="outFunc(this)" class="btn btn-default btn-icon borderless"
+												 data-toggle="tooltip" data-placement="top" title="Copy code">
+													<i class="far fa-copy"></i>
+												</button>
+											</div>
+										</div>
+										<div class="collapse" id="collapseModalTable">
+											<div class="post-body">
+												<pre><code id="copyModalTable">
+&lt;!-- Button trigger modal --&gt;
+&lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleTableModal"&gt;
+	MODAL TABLE
+&lt;/button&gt;<br>
+&lt;!-- Modal --&gt;
+&lt;div class="modal fade" id="exampleTableModal" tabindex="-1" role="dialog" aria-hidden="true"&gt;
+	&lt;div class="modal-dialog modal-dialog-centered" role="document"&gt;
+		&lt;div class="modal-content"&gt;
+			&lt;div class="modal-header"&gt;
+				&lt;h5 class="modal-title"&gt;Modal with table&lt;/h5&gt;
+				&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+					&lt;span aria-hidden="true"&gt;&lt;i class="fa fa-times"&gt;&lt;/i&gt;&lt;/span&gt;
+				&lt;/button&gt;
+			&lt;/div&gt;
+			&lt;div class="modal-body"&gt;
+				&lt;button type="button" class="btn btn-primary" style="float: right;"&gt;
+					&lt;i class="fas fa-plus"&gt;&lt;/i&gt; ADD
+				&lt;/button&gt;
+				&lt;table id="tableOne" class="display borderless dataTable compact" style="width:100%"&gt;
+					&lt;thead&gt;
+						&lt;tr&gt;
+							&lt;th&gt;First Name&lt;/th&gt;
+							&lt;th&gt;Role&lt;/th&gt;
+							&lt;th&gt;Action&lt;/th&gt;
+						&lt;/tr&gt;
+					&lt;/thead&gt;
+					&lt;tbody&gt;
+						&lt;tr&gt;
+							&lt;td&gt;Tjap Nixon&lt;/td&gt;
+							&lt;td&gt;System Architect&lt;/td&gt;
+							&lt;td&gt;
+								&lt;div class="action"&gt;
+									&lt;button class="btn btn-sm btn-icon"&gt;
+										&lt;i class="far fa-edit"&gt;&lt;/i&gt;
+									&lt;/button&gt;
+									&lt;button class="btn btn-sm btn-icon"&gt;
+										&lt;i class="far fa-trash-alt"&gt;&lt;/i&gt;
+									&lt;/button&gt;
+								&lt;/div&gt;
+							&lt;/td&gt;
+						&lt;/tr&gt;
+						&lt;tr&gt;
+							...
+						&lt;/tr&gt;
+					&lt;/tbody&gt;
+				&lt;/table&gt;
+			&lt;/div&gt;
+			&lt;div class="modal-footer"&gt;
+				&lt;button type="button" class="btn btn-link" data-dismiss="modal"&gt;Close&lt;/button&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+												</code></pre>
+											</div>
+										</div>
+
+										<!-- Modal -->
+										<div class="modal fade" id="exampleTableModal" tabindex="-1" role="dialog" aria-hidden="true">
+											<div class="modal-dialog modal-dialog-centered" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title">Modal with table</h5>
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+															<span aria-hidden="true"><i class="fa fa-times"></i></span>
+														</button>
+													</div>
+													<div class="modal-body">
+														<button type="button" class="btn btn-primary" style="float: right;">
+															<i class="fas fa-plus"></i> ADD
+														</button>
+														<table id="tableOne" class="display borderless dataTable compact" style="width:100%">
+															<thead>
+																<tr>
+																	<th>First Name</th>
+																	<th>Role</th>
+																	<th>Action</th>
+																</tr>
+															</thead>
+															<tbody>
+															<tr>
+																<td>Tjap Nixon</td>
+																<td>System Architect</td>
+																<td>
+																	<div class="action">
+																		<button class="btn btn-sm btn-icon">
+																			<i class="far fa-edit"></i>
+																		</button>
+																		<button class="btn btn-sm btn-icon">
+																			<i class="far fa-trash-alt"></i>
+																		</button>
+																	</div>
+																	<!-- <button class="btn btn-sm btn-icon">
+                                                                        <i class="fas fa-eye"></i>
+                                                                    </button> -->
+																</td>
+															</tr>
+															<tr>
+																<td>Cathrine Rpo</td>
+																<td>Java Developer</td>
+																<td>
+																	<div class="action">
+																		<button class="btn btn-sm btn-icon">
+																			<i class="far fa-edit"></i>
+																		</button>
+																		<button class="btn btn-sm btn-icon">
+																			<i class="far fa-trash-alt"></i>
+																		</button>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>John Smith</td>
+																<td>Fullstack Developer</td>
+																<td>
+																	<div class="action">
+																		<button class="btn btn-sm btn-icon">
+																			<i class="far fa-edit"></i>
+																		</button>
+																		<button class="btn btn-sm btn-icon">
+																			<i class="far fa-trash-alt"></i>
+																		</button>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Ashton Cox</td>
+																<td>Junior Technical Author</td>
+																<td>
+																	<div class="action">
+																		<button class="btn btn-sm btn-icon">
+																			<i class="far fa-edit"></i>
+																		</button>
+																		<button class="btn btn-sm btn-icon">
+																			<i class="far fa-trash-alt"></i>
+																		</button>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Cathrine Cale</td>
+																<td>Java Developer</td>
+																<td>
+																	<div class="action">
+																		<button class="btn btn-sm btn-icon">
+																			<i class="far fa-edit"></i>
+																		</button>
+																		<button class="btn btn-sm btn-icon">
+																			<i class="far fa-trash-alt"></i>
+																		</button>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>John Smith</td>
+																<td>Fullstack Developer</td>
+																<td>
+																	<div class="action">
+																		<button class="btn btn-sm btn-icon">
+																			<i class="far fa-edit"></i>
+																		</button>
+																		<button class="btn btn-sm btn-icon">
+																			<i class="far fa-trash-alt"></i>
+																		</button>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Brown Suth</td>
+																<td>Sales Administrator</td>
+																<td>
+																	<div class="action">
+																		<button class="btn btn-sm btn-icon">
+																			<i class="far fa-edit"></i>
+																		</button>
+																		<button class="btn btn-sm btn-icon">
+																			<i class="far fa-trash-alt"></i>
+																		</button>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Cedric Kelly</td>
+																<td>Javascript Developer</td>
+																<td>
+																	<div class="action">
+																		<button class="btn btn-sm btn-icon">
+																			<i class="far fa-edit"></i>
+																		</button>
+																		<button class="btn btn-sm btn-icon">
+																			<i class="far fa-trash-alt"></i>
+																		</button>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Ashton Cox</td>
+																<td>Junior Technical Author</td>
+																<td>
+																	<div class="action">
+																		<button class="btn btn-sm btn-icon">
+																			<i class="far fa-edit"></i>
+																		</button>
+																		<button class="btn btn-sm btn-icon">
+																			<i class="far fa-trash-alt"></i>
+																		</button>
+																	</div>
+																</td>
+															</tr>
+															<tr>
+																<td>Cedric Kelly</td>
+																<td>Javascript Developer</td>
+																<td>
+																	<div class="action">
+																		<button class="btn btn-sm btn-icon">
+																			<i class="far fa-edit"></i>
+																		</button>
+																		<button class="btn btn-sm btn-icon">
+																			<i class="far fa-trash-alt"></i>
+																		</button>
+																	</div>
+																</td>
+															</tr>
+
+															</tbody>
+														</table>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- asd -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-12 stretch-card grid-margin">
+								<div class="card">
+									<div class="card-body">
+										<div class="clearfix">
+											<h4 class="card-title float-left">Modal Size variants</h4>
+											<p class="card-description">
+												Modals have three optional sizes, available via modifier classes to be
+												placed on a .modal-dialog. These sizes kick in at certain breakpoints to
+												avoid horizontal scrollbars on narrower viewports.
+											</p>
+										</div>
+										<div class="component-container">
+											<!-- Button default modal -->
+											
+          <button type="button" onclick="openModal()" class="btn btn-primary btn-block"> JUAL EMAS</button>
+<div class="modal fade" id="confirmation" tabindex="-1" role="dialog" aria-labelledby="confirmation"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h4>Warning</h4>
+          <p class="mb-0"> 
+            <b>Penjualan Emas melebihi limit Saldo DOKU Wallet.</b>  Apakah kamu ingin melanjutkan dan selisih penjualan akan
+            di transfer ke rekening terdaftar? </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-link" data-dismiss="modal" onclick="closeModal()">BATAL</button>
+          <button type="button" class="btn btn-primary" onclick="window.location.href='transaction-status.html'">LANJUTKAN</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="modal-backdrop fade" style="display: none;"></div> -->
+
+										</div>
+
+										</div>
+
+										<!-- Default Modal -->
+										
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</main>
+		<!-- page-content" -->
+	</div>
+	<!-- page-wrapper -->
+
+	<!-- JQuery JS -->
+	<script src="../../js/jquery-3.3.1.min.js"></script>
+
+	<!-- Popper and Bootstrap JS -->
+	<script src="../../js/popper.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+
+	<!-- UI Framework Common JS -->
+	<script src="../../js/main.js"></script>
+	<script src="../../js/code-snippet.js"></script>
+
+	<script>
+		$(document).ready(function () {
+			$('#toggle-sidebar').on('click', function () {
+				$('#sidebar').toggleClass('active');
+				$(this).toggleClass('open');
+			});
+		});
+
+		$(document).ready(function(){
+			$('[data-toggle="tooltip"]').tooltip();   
+		});
+
+		let colors = document.getElementsByTagName('pre');
+		for(let color of colors) {
+			snippetCodeColor(color);	
+		}
+	</script>
+	<script>
+    const modalTarget = document.getElementById('confirmation');
+    const modalBackdrop = document.querySelector('.modal-backdrop');
+		const parentBody = parent.document.body;
+		const iFrame = parent.document.getElementById('iFrame');
+		console.log(iFrame);
+
+		const newOverlay = document.createElement('div');
+		newOverlay.style.cssText = 'background-color: transparent;bottom: 0;left: 0;position: fixed;right: 0;top: 0;'
+
+    openModal = () => {
+      modalTarget.classList.add('show');
+			modalTarget.style.display = 'block';
+			document.body.style='overflow:none'
+      // modalBackdrop.classList.add('show');
+			// modalBackdrop.style.display = 'block';
+			parentBody.style.pointerEvents='none';
+			iFrame.style.pointerEvents='auto'
+		
+    }
+
+    closeModal = () => {
+      modalTarget.classList.add('hide');
+      modalTarget.style.display = 'none';
+      // modalBackdrop.classList.remove('show');
+			// modalBackdrop.style.display = 'none';
+			parentBody.style.pointerEvents='auto';
+    }
+  </script>
+
+</body>
+
+</html>

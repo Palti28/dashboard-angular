@@ -13,8 +13,7 @@
     [routerLink]="item.route" (click)="onItemSelected(item)" aria-expanded="false" aria-controls="collapseExample">
     <span class="menu-icon">
       <!-- <i class="fas fa-chess-rook"></i> -->
-      <i class="fa" [ngStyle]="{'margin-right': (item.iconName !== '') ? '' :'16px'} "
-        [className]="'fa fa-'+ item.iconName"></i>
+      <i [ngClass]="iconSize(depth)" [ngStyle]="{'margin-right': (item.iconName !== '') ? '' :'16px'} "[className]="'fa fa-'+ item.iconName"></i>
     </span>
     <span class="menu-text">
       {{item.displayName}}
